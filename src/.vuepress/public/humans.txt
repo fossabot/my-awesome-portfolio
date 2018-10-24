@@ -12,12 +12,10 @@ Remembering, we are human beings and not machines.
   Software: Visual Code Studio (VS Code)
 
 /* AUTHOR */
-	Name:        Alan Ktquez
-	Nickname:    ktquez
-	Title:       CEO & Founder HTML Moderno and Ktquez Play
-	Location:    Recife. Pernambuco, Brazil
-	Site:        https://ktquez.com/
-	Site:        https://htmlmoderno.com.br/
-  Twitter:     https://twitter.com/ktquez/
-  Github:      https://github.com/ktquez/
-	Donation:    https://www.patreon.com/ktquez
+	Name:        Thomas Letsch Groch
+	Nickname:    thgroch
+	Title:       WebDeveloper
+	Location:    Florianópolis. Santa Catarina, Brazil
+	Site:        https://thomasgroch.com/
+	Twitter:     https://twitter.com/thgroch/
+  Github:      https://github.com/thomasgroch/

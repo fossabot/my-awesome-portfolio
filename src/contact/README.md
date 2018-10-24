@@ -17,6 +17,6 @@ My contact form (Ideal for using a typeform iframe)
   <lazy-load tag="iframe" :data="{ src: 'https://MY_TYPEFORM_URL', height: 1000 }" />
 </div> 
 
-See more in https://github.com/ktquez/vuepress-theme-ktquez#lazy-load
+See more in https://github.com/thgroch/vuepress-theme-thgroch#lazy-load
 -->
 

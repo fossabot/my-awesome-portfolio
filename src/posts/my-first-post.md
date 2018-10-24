@@ -2,7 +2,7 @@
 view: post
 layout: post                          # Only in unique we use the "layout: post"
 lang: en                              # Lang is required
-author: ktquez
+author: thgroch
 title: My First post
 description: 
 excerpt: 

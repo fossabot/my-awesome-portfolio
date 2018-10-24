@@ -7,25 +7,25 @@ module.exports = {
   },
   ads,
   logo: {
-    name: 'ktquez-play-logo',
+    name: 'thgroch-play-logo',
     ext: 'png',
     alt: 'Logo em 3 cores no formato de play'
   },
   share: {
-    facebookCaption: 'Ktquez Play',
-    twitterVia: 'ktquez',
+    facebookCaption: 'thgroch Play',
+    twitterVia: 'thgroch',
   },
   newsletter: {
     provider: 'mailchimp',
     action: ''
   },
-  copy: `2018 © Ktquez play - 
+  copy: `2018 © thgroch play - 
         <a href="https://vuepress.vuejs.org/" rel="noopener" target="_blank">
           FEITO COM VUEPRESS
         </a>`,
   footer: {
     nav1: {
-      title: 'Ktquez Play',
+      title: 'thgroch Play',
       items: [
         {
           label: 'SOBRE',
@@ -49,19 +49,19 @@ module.exports = {
   social: [
     {
       name: 'facebook',
-      link: 'https://www.facebook.com/ktquezplay'
+      link: 'https://www.facebook.com/thgrochplay'
     },
     {
       name: 'twitter',
-      link: 'https://www.twitter.com/ktquez'
+      link: 'https://www.twitter.com/thgroch'
     },
     {
       name: 'youtube',
-      link: 'https://www.youtube.com/ktquez'
+      link: 'https://www.youtube.com/thgroch'
     },
     {
       name: 'github',
-      link: 'https://www.github.com/ktquez'
+      link: 'https://www.github.com/thgroch'
     }
   ]
 }

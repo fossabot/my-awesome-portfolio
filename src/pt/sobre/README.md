@@ -1,7 +1,7 @@
 ---
 view: page
 title: Sobre nós
-description: Fique sabendo mais sobre a plataforma de artigos e vídeo sobre desenvolvimento web e estilo de vida, ktquez Play by Alan Ktquez.
+description: Web Developer.
 excerpt: Fazendo o desenvolvimento da web ainda mais interessante
 ctaContact: true
 meta:
@@ -11,4 +11,6 @@ meta:
     content: /image-social-share.png
 ---
 
-### Sobre mim
+# Sobre mim
+
+asd

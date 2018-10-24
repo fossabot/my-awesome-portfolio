@@ -10,7 +10,7 @@ module.exports = {
   },
   ads,
   logo: {
-    name: 'ktquez-play-logo',
+    name: 'thgroch-play-logo',
     ext: 'png',
     alt: 'Logo in 3 colors in play format'
   },
@@ -28,7 +28,7 @@ module.exports = {
         </a>`,
   footer: {
     nav1: {
-      title: 'Ktquez Play',
+      title: 'thgroch Play',
       items: [
         {
           label: 'ABOUT',

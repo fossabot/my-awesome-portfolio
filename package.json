@@ -1,35 +1,32 @@
 {
-  "name": "your-name-app",
-  "version": "0.1.0",
-  "description": "Descripton your webapp",
+  "name": "my-awesome-portfolio",
+  "version": "1.0.3",
+  "homepage": "https://thomasgroch.com.br/",
+  "description": "Just playing around",
+  "author": "Thomas Letsch Groch <thomas.groch@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "dev": "node_modules/.bin/vuepress dev src",
     "build": "node_modules/.bin/vuepress build src"
   },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "keywords": [
-    "vuepress",
-    "vuepress-theme",
-    "site",
-    "blog",
-    "theme-ktquez",
-    "markdown",
-    "static",
-    "vuejs"
-  ],
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": ""
-  },
-  "homepage": "",
   "devDependencies": {
+    "dotenv": "^6.1.0",
+    "eslint": "^4.19.1",
     "vuepress": "^0.14.2"
   },
   "dependencies": {
-    "vuepress-theme-ktquez": "^0.2.11"
-  }
+    "vuepress-theme-yuu": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/thomas.groch/vuepress-theme-thgroch.git"
+  },
+  "keywords": [
+    "blog",
+    "developer",
+    "vuepress",
+    "markdown",
+    "static",
+    "vuejs"
+  ]
 }

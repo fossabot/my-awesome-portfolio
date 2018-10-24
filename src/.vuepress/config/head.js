@@ -22,7 +22,7 @@ module.exports = [
   
   // Twitter
   ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-  ['meta', { name: 'twitter:site', content: '@ktquez' }],
+  ['meta', { name: 'twitter:site', content: '@thgroch' }],
 
   // Facebook
   ['meta', { property: 'fb:app_id', content: `MY FACEBOOK APP ID` }],

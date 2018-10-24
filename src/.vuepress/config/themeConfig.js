@@ -1,13 +1,11 @@
-// See more in https://github.com/ktquez/vuepress-theme-ktquez#themeconfig
-const en = require('./locales/en/config')
+// See more in https://github.com/thgroch/vuepress-theme-thgroch#themeconfig
 const pt = require('./locales/pt/config')
-const es = require('./locales/es/config')
+const en = require('./locales/en/config')
 
 module.exports = {
   locales: {
-    '/': en,
-    '/pt/': pt,
-    '/es/': es
+    '/': pt,
+    '/en/': en
   },
   serviceWorker: {
     updatePopup: { 
@@ -15,7 +13,7 @@ module.exports = {
       buttonText: "Update" 
     }
   },
-  disqus: 'ktquez',
+  disqus: 'thgroch',
   url: `https://MY_DOMAIN.COM`,
   cdn: '',
   blackWhite: true,

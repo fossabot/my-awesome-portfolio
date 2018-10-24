@@ -1,11 +1,10 @@
-// See more in https://github.com/ktquez/vuepress-theme-ktquez#configuration
 const path = require('path')
 const head = require('./config/head')
 const themeConfig = require('./config/themeConfig')
 const resolve = pathName => path.join(__dirname, pathName)
 
 module.exports = {
-  theme: 'ktquez',
+  theme: 'thgroch',
   head,
   themeConfig,
   base: '/',
@@ -15,13 +14,10 @@ module.exports = {
   serviceWorker: true,
   locales: {
     '/': {
-      lang: 'en'
-    },
-    '/pt/': {
       lang: 'pt-br'
     },
-    '/es/': {
-      lang: 'es'
+    '/en/': {
+      lang: 'en'
     }
   },
   configureWebpack () {
