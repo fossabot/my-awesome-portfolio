@@ -1,25 +1,18 @@
+require('dotenv').config()
 const path = require('path')
-const head = require('./config/head')
-const themeConfig = require('./config/themeConfig')
+const head = require('./head')
+const themeConfig = require('./themeConfig')
 const resolve = pathName => path.join(__dirname, pathName)
 
 module.exports = {
-  theme: 'thgroch',
+  // theme: 'thgroch',
   head,
   themeConfig,
-  base: '/',
-  title: `MY TITLE`,  
-  ga: `MY TRACKING CODE GOOGLE ANALYTICS`,
-  evergreen: true,  // For modern browsers
+  base: process.env.VUEPRESS_BASE_URL,
+  title: process.env.VUEPRESS_TITLE,
+  ga: process.env.VUEPRESS_GOOGLE_ANALYTICS,
+  evergreen: true, // Faster on modern browsers. (Disable ES5 transpilation and polyfills for IE)
   serviceWorker: true,
-  locales: {
-    '/': {
-      lang: 'pt-br'
-    },
-    '/en/': {
-      lang: 'en'
-    }
-  },
   configureWebpack () {
     return {
       resolve: {

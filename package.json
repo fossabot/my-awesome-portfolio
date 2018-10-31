@@ -7,14 +7,18 @@
   "license": "MIT",
   "scripts": {
     "dev": "node_modules/.bin/vuepress dev src",
-    "build": "node_modules/.bin/vuepress build src"
+    "build": "node_modules/.bin/vuepress build src",
+    "setup-language": "cd src && ln -s pt/* .",
+    "setup-gpg": "git config --global gpg.program $(which gpg)"
   },
   "devDependencies": {
     "dotenv": "^6.1.0",
     "eslint": "^4.19.1",
-    "vuepress": "^0.14.2"
+    "gitmoji-cli": "^1.9.2",
+    "vuepress": "^1.0.0-alpha.18"
   },
   "dependencies": {
+    "dotenv": "^6.1.0",
     "vuepress-theme-yuu": "^1.0.0"
   },
   "repository": {
