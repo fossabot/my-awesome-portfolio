@@ -1,1 +1,1 @@
-pt/index.md
+../content/pt/index.md
