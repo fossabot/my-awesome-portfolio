@@ -6,19 +6,19 @@
   "author": "Thomas Letsch Groch <thomas.groch@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "node_modules/.bin/vuepress dev src",
+    "dev": "node_modules/.bin/vuepress dev src --host localhost",
     "build": "node_modules/.bin/vuepress build src",
     "setup-language": "cd src && ln -s ../content/pt/* .",
     "setup-gpg": "git config --global gpg.program $(which gpg)"
   },
   "devDependencies": {
-    "dotenv": "^6.1.0",
     "eslint": "^4.19.1",
     "gitmoji-cli": "^1.9.2",
     "vuepress": "^1.0.0-alpha.18"
   },
   "dependencies": {
     "dotenv": "^6.1.0",
+    "markdown-it-katex": "^2.0.3",
     "vuepress-theme-yuu": "^1.0.0"
   },
   "repository": {

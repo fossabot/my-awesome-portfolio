@@ -1,28 +1,8 @@
 ---
-view: post
-layout: post                      # Only in unique we use the "layout: post"
-lang: pt-br                       # Lang is required
-author: thgroch
-title: Meu primeiro post
-description: 
-excerpt: 
-cover: false                      # Leave false if the post does not have cover image, if there is set to true
-coverAlt: 
-demo: 
-audio: 
-categories:
-  - vuejs
-tags: 
-  - vuejs
-  - vuepress
-  - static site
-created_at: 2018-08-22 10:00
-updated_at: 2018-08-22 10:00
-meta:                                 # If you have cover image
-  - property: og:image
-    content: /images/pt/posts/my-first-post.png     # For locale /pt/, add  "/images/pt/posts/"
-  - name: twitter:image
-    content: /images/pt/posts/my-first-post.png
+title: Archlinux笔记(一)
+date: 2016-04-12 08:32:30
+tags: [Archlinux]
+category: Archlinux
 ---
 
 __Advertisement :)__
@@ -51,11 +31,6 @@ ___
 ---
 
 ***
-
-## video
-
-### Using lazy-load using IntersectionObserver
-<lazy-load tag="iframe" :data="{ src: 'https://www.youtube.com/watch?v=lIv1ItUzktc' }" />
 
 ## Typographic replacements
 
@@ -178,9 +153,6 @@ Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 ### default rendering
 ![Minion](https://octodex.github.com/images/minion.png)
 
-### Using lazy-load using IntersectionObserver
-<lazy-load tag="img" :data="{ src: 'https://octodex.github.com/images/stormtroopocat.jpg', alt: 'The Stormtroopocat' }" />
-
 ## Plugins
 
 The killer feature of `markdown-it` is very effective support of
@@ -232,9 +204,6 @@ Duplicated footnote reference[^second].
 ### [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
 
 Term 1
-
-:   Definition 1
-with lazy continuation.
 
 Term 2 with *inline markup*
 

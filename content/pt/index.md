@@ -1,27 +1,11 @@
 ---
+# navbar: false
+# layout: MaintenanceLayout
+# layout: MainLayout
 home: true
-heroImage: /hero.png
-actionText: Get Started →
-actionLink: /guide/
-features:
-- title: Simplicity First
-  details: Minimal setup with markdown-centered project structure helps you focus on writing.
-- title: Vue-Powered
-  details: Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.
-- title: Performant
-  details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
-footer: MIT Licensed | Copyright © 2018-present Evan You
-meta:
-  - name: description
-    content: hello
-  - name: keywords
-    content: super duper SEO
-  - property: og:image
-    content: /image-social-share.png
-  - name: twitter:image
-    content: /image-social-share.png
 ---
-
-<pre>
-{{ $page }}
-</pre>
+<!-- <ul id="example-1">
+  <li v-for="page in $site.pages">
+    <a :href="page.path">{{ page.title }}</a><span v-if="page.lastUpdated"> - {{ page.lastUpdated }}</span>
+  </li>
+</ul> -->
