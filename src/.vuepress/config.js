@@ -1,13 +1,14 @@
-require('dotenv').config()
+// require('dotenv').config()
 const path = require('path')
 const head = require('./head')
 const { generateBlogSideBar } = require('./util')
 const resolve = pathName => path.join(__dirname, pathName)
+const info = require('../setup/info.json');
+const connect = require('../setup/connect.json');
 
 module.exports = {
-  // theme: 'thgroch',
-  base: process.env.VUEPRESS_BASE_URL,
-  title: process.env.VUEPRESS_TITLE,
+  base: '/',
+  title: info.siteName,
   ga: process.env.VUEPRESS_GOOGLE_ANALYTICS,
   evergreen: true, // Faster on modern browsers. (Disable ES5 transpilation and polyfills for IE)
   serviceWorker: true,
@@ -46,10 +47,7 @@ module.exports = {
           text: 'blog',
           link: '/blog/',
       },
-      // {
-      //     text: 'admin',
-      //     link: '/admin/#/',
-      // },
+      ...info.menu
     ],
     sidebar: [
       'blog/',

@@ -4,15 +4,15 @@
   "siteIcon": "/images/Avatar.png",
   "menu": [
     {
-      "name": "jake101",
+      "text": "jake101",
       "link": "https://www.jake101.com/"
     },
     {
-      "name": "Nuxt.js",
+      "text": "Nuxt.js",
       "link": "https://www.nuxtjs.org/"
     },
     {
-      "name": "Netlify",
+      "text": "Netlify",
       "link": "https://www.netlify.com/"
     }
   ]

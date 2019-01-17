@@ -1,6 +1,9 @@
+const info = require('../setup/info.json');
+
 module.exports = [
   ['meta', { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' }],
-  ['meta', { name: 'apple-mobile-web-app-title', content: process.env.VUEPRESS_TITLE }],
+  ['meta', { name: 'apple-mobile-web-app-title', content: info.siteName }],
+  ['meta', { name: 'description', content: info.sitedescription }],
   ['meta', { name: 'theme-color', content: `MY COLOR THEME` }],
   ['meta', { name: 'msapplication-navbutton-color', content: `MY COLOR THEME` }],
   ['meta', { name: 'mobile-web-app-capable', content: 'yes' }],
@@ -9,7 +12,6 @@ module.exports = [
   ['meta', { name: 'rating', content: 'general' }],
   ['meta', { name: 'robots', content: 'index,follow' }],
   ['meta', { name: 'googlebot', content: 'index,follow' }],
-  
   // Microsoft
   ['meta', { name: 'application-name', content: process.env.VUEPRESS_TITLE }],
   ['meta', { name: 'msapplication-TileColor', content: `MY COLOR THEME` }],
