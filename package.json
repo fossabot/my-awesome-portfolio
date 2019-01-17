@@ -6,11 +6,13 @@
   "author": "Thomas Letsch Groch <thomas.groch@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "serve": "yarn build && http-server src/.vuepress/dist/ -c-1 -o",
     "dev": "node_modules/.bin/vuepress dev src --host localhost",
     "build": "node_modules/.bin/vuepress build src",
     "setup-language": "cd src && ln -s ../content/pt/* .",
     "setup-gpg": "git config --global gpg.program $(which gpg)",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "yarn lint"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
