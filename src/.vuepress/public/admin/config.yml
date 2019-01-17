@@ -1,6 +1,6 @@
 backend:
   name: gitlab
-  repo: "thomas.groch/my-awesome-portfolio"
+  repo: thomas.groch/my-awesome-portfolio
   branch: master # Branch to update (optional; defaults to master)
 media_folder: "src/.vuepress/public/images"
 public_folder: "src/.vuepress/dist/"
