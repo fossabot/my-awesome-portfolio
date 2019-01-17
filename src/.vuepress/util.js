@@ -7,7 +7,7 @@ const generateBlogSideBar = dir => {
 console.log(join(__dirname, '..', dir))
   let files = glob.sync('**/*.md', { cwd: join(__dirname, '..', dir) })
     .filter(p => basename(p) !== 'README.md')
-    .map(x => '/posts/' + x)
+    .map(x => '/blog/' + x)
 
   files = files.map(file => {
     let frontmatter = parseFrontmatter(readFileSync(join(__dirname, '..', file), 'utf8').split('\n').map(l => l.trim()).join('\n'))

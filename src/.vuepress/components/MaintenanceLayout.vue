@@ -1,6 +1,6 @@
 <template>
 <div>
-  <Content />
+  <!-- <Content /> -->
   <p>Atualmente em desenvolvimento pesado.</p>
 </div>
 </template>

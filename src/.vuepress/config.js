@@ -38,26 +38,22 @@ module.exports = {
           text: 'home',
           link: '/',
       },
-      {
-          text: 'projects',
-          link: '/projects/',
-      },
+      // {
+      //     text: 'projects',
+      //     link: '/projects/',
+      // },
       {
           text: 'blog',
           link: '/blog/',
       },
-      {
-          text: 'admin',
-          link: '/admin',
-      },
-      {
-          text: 'netlifyCMS help',
-          link: '/docs/netlifycms-configuration.html',
-      }
+      // {
+      //     text: 'admin',
+      //     link: '/admin/#/',
+      // },
     ],
     sidebar: [
-      'posts/',
-      ...generateBlogSideBar('/posts')
+      'blog/',
+      ...generateBlogSideBar('/blog')
     ],
     sidebarDepth: 0,
     serviceWorker: {

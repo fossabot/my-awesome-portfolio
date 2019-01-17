@@ -1,4 +1,5 @@
 ---
+view: posts
 title: Archlinux笔记(一)
 date: 2016-04-12 08:32:30
 tags: [Archlinux]
@@ -6,6 +7,10 @@ category: Archlinux
 ---
 
 __Advertisement :)__
+
+::: v-pre
+`{{ This will be displayed as-is }}`
+:::
 
 - __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
   resize in browser.
