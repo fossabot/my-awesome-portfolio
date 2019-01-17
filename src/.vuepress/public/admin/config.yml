@@ -18,15 +18,19 @@ collections:
       - {label: Tags, name: tags, widget: string}
       - {label: "View", name: "view", widget: "hidden", default: "posts"}
       - {label: "Category", name: "category", widget: "relation", collection: "blog", searchFields: ["category"], valueField: "category", displayFields: ["category"], required: false}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       # - {label: "Post tags", name: "tag", widget: "relation", collection: "tags", searchFields: ["name", "twitterHandle"], valueField: "name", displayFields: ["twitterHandle", "followerCount"]
       # - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
   - label: "Pages"
     name: "pages"
     folder: "src/pages"
     create: true
+    slug: "{{slug}}"
     fields:
       - {label: Title, name: title, widget: string}
-      - {label: Intro, name: intro, widget: markdown}
+      - {label: "View", name: "view", widget: "hidden", default: "page"}
+      - {label: Body, name: body, widget: markdown}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
   # - label: 'Categories'
   #   name: 'blogcategories'
   #   folder: "src/content/categories"
@@ -36,4 +40,34 @@ collections:
   #   fields:
   #     - {label: Title, name: title, widget: string}
   #     - {label: Description, name: description, widget: string, required: false}
- 
+  - label: "Setup"
+  name: "setup"
+  files:
+  - label: "Site Info"
+    name: "info"
+    format: 'json'
+    file: "src/setup/info.json"
+    fields:
+      - {label: Site Name, name: sitename, widget: string}
+      - {label: Site Description, name: sitedescription, widget: string}
+      - {label: Site Icon (Must be 512x512 or larger square PNG), name: siteicon, widget: image,default: "/icon.png"}
+      - {label: Show Icon in Menu, name: showmenu, widget: boolean}
+      - {label: Email Newsletter Signup, name: emailsignup, widget: boolean}
+      - label: Menu Links
+        name: menu
+        widget: list
+        fields:
+          - {label: Name, name: name, widget: string}
+          - {label: Position, name: position, widget: string}
+          - {label: Link, name: link, widget: string}
+  - label: "Connect"
+    name: "connect"
+    format: 'json'
+    file: "src/setup/connect.json"
+    fields:
+      - label: 'Links'
+        name: 'connectlinks'
+        widget: 'list'
+        fields:
+          - {label: Link Name, name: name, widget: string}
+          - {label: URL, name: url, widget: string}
