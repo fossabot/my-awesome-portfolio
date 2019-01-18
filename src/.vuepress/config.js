@@ -35,18 +35,6 @@ module.exports = {
     //   format: 'YYYY年MM月DD日' // pattern can refer to moment.js
     // },
     nav: [
-      {
-          text: 'home',
-          link: '/',
-      },
-      // {
-      //     text: 'projects',
-      //     link: '/projects/',
-      // },
-      {
-          text: 'blog',
-          link: '/blog/',
-      },
       ...info.menu
     ],
     sidebar: [

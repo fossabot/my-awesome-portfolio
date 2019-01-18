@@ -49,7 +49,7 @@ collections:
         file: "src/setup/info.json"
         fields:
           - {label: Site Name, name: siteName, widget: string}
-          - {label: Site Description, name: siteDscription, widget: string}
+          - {label: Site Description, name: siteDescription, widget: string}
           - {label: Site Icon (Must be 512x512 or larger square PNG), name: siteIcon, widget: image, default: "/images/Avatar.png"}
           - label: Menu Links
             name: menu
@@ -57,6 +57,7 @@ collections:
             fields:
               - {label: Text, name: text, widget: string}
               - {label: Link, name: link, widget: string}
+              - {label: "Draft", name: "draft", widget: "boolean", default: true}
       - label: "Connect"
         name: "connect"
         format: "json"

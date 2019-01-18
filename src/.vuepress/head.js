@@ -3,7 +3,7 @@ const info = require('../setup/info.json');
 module.exports = [
   ['meta', { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' }],
   ['meta', { name: 'apple-mobile-web-app-title', content: info.siteName }],
-  ['meta', { name: 'description', content: info.sitedescription }],
+  ['meta', { name: 'description', content: info.siteDescription }],
   ['meta', { name: 'theme-color', content: `MY COLOR THEME` }],
   ['meta', { name: 'msapplication-navbutton-color', content: `MY COLOR THEME` }],
   ['meta', { name: 'mobile-web-app-capable', content: 'yes' }],

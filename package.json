@@ -6,7 +6,7 @@
   "author": "Thomas Letsch Groch <thomas.groch@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "serve": "yarn build && http-server src/.vuepress/dist/ -c-1 -o",
+    "serve": "yarn build && http-server src/.vuepress/dist/ -c-1 -o -a localhost",
     "dev": "node_modules/.bin/vuepress dev src --host localhost",
     "build": "node_modules/.bin/vuepress build src",
     "setup-language": "cd src && ln -s ../content/pt/* .",
