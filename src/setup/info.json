@@ -1,19 +1,22 @@
 {
   "siteName": "Thomas Groch",
-  "siteDescription": "A Developer portfolio",
+  "siteDscription": "A Developer portfolio",
   "siteIcon": "/images/Avatar.png",
   "menu": [
     {
       "text": "home",
-      "link": "/"
+      "link": "/",
+      "active": true
     },
     {
       "text": "blog",
-      "link": "/blog/"
+      "link": "/blog/",
+      "active": true
     },
     {
       "text": "projects",
-      "link": "/projects/"
+      "link": "/projects/",
+      "active": false
     }
   ]
 }
