@@ -4,6 +4,7 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 media_folder: "src/.vuepress/public/images"
 public_folder: "src/.vuepress/dist/"
+display_url: "/"
 collections:
   - label: "Blog" # Used in the UI
     name: "blog" # Used in routes, e.g., /admin/collections/blog
