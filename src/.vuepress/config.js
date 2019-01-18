@@ -35,7 +35,7 @@ module.exports = {
     //   format: 'YYYY年MM月DD日' // pattern can refer to moment.js
     // },
     nav: [
-      ...info.menu
+      ...info.menu.filter(link => link.isActive)
     ],
     sidebar: [
       'blog/',

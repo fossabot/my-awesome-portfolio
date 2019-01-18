@@ -6,17 +6,17 @@
     {
       "text": "home",
       "link": "/",
-      "active": true
+      "isActive": true
     },
     {
       "text": "blog",
       "link": "/blog/",
-      "active": true
+      "isActive": true
     },
     {
       "text": "projects",
       "link": "/projects/",
-      "active": false
+      "isActive": false
     }
   ]
 }

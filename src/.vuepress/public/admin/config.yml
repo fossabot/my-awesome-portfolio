@@ -57,7 +57,7 @@ collections:
             fields:
               - {label: Text, name: text, widget: string}
               - {label: Link, name: link, widget: string}
-              - {label: "Draft", name: "draft", widget: "boolean", default: true}
+              - {label: Active, name: isActive, widget: boolean, default: true}
       - label: "Connect"
         name: "connect"
         format: "json"
