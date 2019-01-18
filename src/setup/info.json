@@ -4,16 +4,16 @@
   "siteIcon": "/images/Avatar.png",
   "menu": [
     {
-      "text": "jake101",
-      "link": "https://www.jake101.com/"
+      "text": "home",
+      "link": "/"
     },
     {
-      "text": "Nuxt.js",
-      "link": "https://www.nuxtjs.org/"
+      "text": "blog",
+      "link": "/blog/"
     },
     {
-      "text": "Netlify",
-      "link": "https://www.netlify.com/"
+      "text": "projects",
+      "link": "/projects/"
     }
   ]
 }
