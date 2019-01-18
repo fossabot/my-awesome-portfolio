@@ -32,7 +32,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: Title, name: title, widget: string}
-      - {label: "View", name: "view", widget: "hidden", default: "page"}
+      - {label: "Sidebar", name: "sidebar", widget: "hidden", default: false}
       - {label: Body, name: body, widget: markdown}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
   # - label: "Categories"
