@@ -2,15 +2,11 @@
   "connectlinks": [
     {
       "name": "Twitter",
-      "url": "https://twitter.com/jasperketone"
+      "url": "https://twitter.com/thgroch"
     },
     {
       "name": "Github",
-      "url": "https://github.com/jake-101"
-    },
-    {
-      "name": "Unsplash",
-      "url": "https://unsplash.com/@jake101"
+      "url": "https://github.com/thomasgroch"
     }
   ]
 }
