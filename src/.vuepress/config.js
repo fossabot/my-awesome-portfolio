@@ -1,4 +1,3 @@
-// require('dotenv').config()
 const path = require('path')
 const head = require('./head')
 const { generateBlogSideBar } = require('./util')
@@ -8,8 +7,9 @@ const connect = require('../setup/connect.json');
 
 module.exports = {
   base: '/',
-  title: info.siteName,
-  ga: process.env.VUEPRESS_GOOGLE_ANALYTICS,
+	title: info.siteName,
+	description: info.siteDescription,
+  ga: info.googleAnalytics,
   evergreen: true, // Faster on modern browsers. (Disable ES5 transpilation and polyfills for IE)
   serviceWorker: true,
   markdown: {
@@ -29,7 +29,7 @@ module.exports = {
   head,
   themeConfig: {
     activeHeaderLinks: false, // Default: true
-    lastUpdated: true,
+    lastUpdated: false,
     // lastUpdated: {
     //   label: 'Última atualização', // string
     //   format: 'YYYY年MM月DD日' // pattern can refer to moment.js
@@ -43,9 +43,9 @@ module.exports = {
     ],
     sidebarDepth: 0,
     serviceWorker: {
-      updatePopup: { 
-        message: "Novos conteúdos 🎉🎉", 
-        buttonText: "Atualizar" 
+      updatePopup: {
+        message: "Novos conteúdos 🎉🎉",
+        buttonText: "Atualizar"
       }
     },
     disqus: 'thgroch',
