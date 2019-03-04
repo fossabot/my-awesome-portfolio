@@ -67,7 +67,8 @@ _This is italic text_
 
 
 > Blockquotes can also be nested...
->> ...by using additional greater-than signs right next to each other...
+> > ...by using additional greater-than signs right next to each other...
+> >
 > > > ...or with spaces between arrows.
 
 
@@ -215,7 +216,7 @@ Term 2 with *inline markup*
 :   Definition 2
 
         { some code, part of Definition 2 }
-
+    
     Third paragraph of definition 2.
 
 _Compact style:_
