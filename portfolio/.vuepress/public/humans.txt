@@ -1,0 +1,21 @@
+Humans.txt is a legal initiative of (humanstxt.org), to talk a little about who is behind the web-based applications, the team involved and the stack used.
+Remembering, we are human beings and not machines.
+
+/* SITE */
+    Last update: 2019-03-18
+    Site name:
+    Site URL:
+    Language: English/Portugues
+    Twitter: thgroch
+    Contact: thomas.groch@gmail.com
+    Built with: Vue.js, Vuepress, HTML5, CSS3, T, Accessibility techniques, PWA e SEO
+    Software: Visual Code Studio (VS Code)
+
+/* AUTHOR */
+    Name:        Thomas Letsch Groch
+    Nickname:    thgroch
+    Title:       WebDeveloper
+    Location:    Florianópolis. Santa Catarina, Brazil
+    Site:        https://thomasgroch.com/
+    Twitter:     https://twitter.com/thgroch/
+    Github:      https://github.com/thomasgroch/

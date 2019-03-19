@@ -1,0 +1,53 @@
+{
+ "name": "Thomas Letsch Groch Web Developer Portfolio",
+ "short_name": "Thomas Groch Portfolio",
+ "lang": "en",
+ "theme_color": "#263647",
+ "background_color": "#263647",
+ "display": "standalone",
+ "description": "Desenvolvedor autodidata, full-stack, e adepto de convenção sobre configuração.",
+ "start_url": "/?utm_source=pwahomescreen",
+ "icons": [
+  {
+   "src": "/favicon/android-36x36.png",
+   "sizes": "36x36",
+   "type": "image\/png",
+   "density": "0.75"
+  },
+  {
+   "src": "/favicon/android-48x48.png",
+   "sizes": "48x48",
+   "type": "image\/png",
+   "density": "1.0"
+  },
+  {
+   "src": "/favicon/android-72x72.png",
+   "sizes": "72x72",
+   "type": "image\/png",
+   "density": "1.5"
+  },
+  {
+   "src": "/favicon/android-96x96.png",
+   "sizes": "96x96",
+   "type": "image\/png",
+   "density": "2.0"
+  },
+  {
+   "src": "/favicon/android-144x144.png",
+   "sizes": "144x144",
+   "type": "image\/png",
+   "density": "3.0"
+  },
+  {
+   "src": "/favicon/android-192x192.png",
+   "sizes": "192x192",
+   "type": "image\/png",
+   "density": "4.0"
+  },
+  {
+    "src": "/favicon/pwa-512x512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }
+ ]
+}

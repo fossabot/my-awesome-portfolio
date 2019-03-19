@@ -1,0 +1,28 @@
+{
+  "siteName": "Thomas Groch Portfolio",
+  "siteDescription": "desenvolvedor autodidata, full-stack, e adepto de convenção sobre configuração.",
+  "googleAnalytics": "",
+  "menu": [
+    {
+      "text": "home",
+      "link": "/",
+      "hide": true
+    },
+    {
+      "text": "blog",
+      "link": "/blog/"
+    },
+    {
+      "text": "projetos",
+      "link": "/projetos.html"
+    },
+    {
+      "text": "sobre",
+      "link": "/sobre.html"
+    },
+    {
+      "text": "contato",
+      "link": "/contato.html"
+    }
+  ]
+}

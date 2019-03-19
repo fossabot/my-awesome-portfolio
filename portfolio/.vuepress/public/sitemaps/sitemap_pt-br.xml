@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://thomasgroch.com/</loc>
+    <lastmod>2019-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thomasgroch.com/blog/</loc>
+    <lastmod>2019-03-18</lastmod>
+  </url>
+  <url>
+    <loc>https://thomasgroch.com/projetos.html</loc>
+    <lastmod>2019-03-18</lastmod>
+  </url>
+  <url>
+    <loc>https://thomasgroch.com/sobre.html</loc>
+    <lastmod>2019-03-18</lastmod>
+  </url>
+  <url>
+    <loc>https://thomasgroch.com/contato.html</loc>
+    <lastmod>2019-03-18</lastmod>
+  </url>
+</urlset>

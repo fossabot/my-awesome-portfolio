@@ -1,0 +1,91 @@
+<template>
+    <main class="home flex items-center justify-center h-full" aria-labelledby="main-title">
+
+        <header class="hero uppercase font-nunito px-4 py-2 m-2 w-1/2">
+
+            <img v-if="data.heroImage" class="rounded shadow-lg" :src="$withBase(data.heroImage)" :alt="data.heroAlt || 'hero'" />
+
+            <h1 class="text-5xl font-nunito text-3xl" v-if="data.heroText !== null" id="main-title">{{ data.heroText || $title || 'Hello' }}</h1>
+
+            <p class="description my-6 mx-auto leading-tight text-2xl ">
+                {{ data.tagline || $description || 'Welcome to your VuePress site' }}
+            </p>
+
+            <div class="links p-4 flex justify-between text-xl" v-if="data.links && data.links.length">
+                <div class="link" v-for="(link, index) in data.links" :key="index">
+                    <a :href="link.href" class="hover:text-black">{{ link.title }}</a>
+                </div>
+            </div>
+
+            <Content class="flex justify-center p-0"/>
+
+        </header>
+    </main>
+</template>
+
+<script>
+	import NavLink from '@theme/components/NavLink.vue'
+
+	export default {
+		components: {NavLink},
+
+		computed: {
+			data() {
+				return this.$page.frontmatter
+			},
+
+			actionLink() {
+				return {
+					link: this.data.actionLink,
+					text: this.data.actionText
+				}
+			}
+		}
+	}
+</script>
+
+<style lang="stylus">
+
+    .bg-accent
+        background-color $accentColor
+
+    /*
+    .home
+      padding $navbarHeight 2rem 0
+      max-width 960px
+      .hero
+        img
+          max-width: 100%
+          max-height 280px
+          display block
+          margin 3rem auto 1.5rem
+        .description
+          max-width 35rem
+          color lighten($textColor, 40%)
+        .action-button
+          transition background-color .1s ease
+          box-sizing border-box
+      .links
+        border-top 1px solid $borderColor
+        padding 1.2rem 0
+        margin-top 2.5rem
+        display flex
+        flex-wrap wrap
+        align-items flex-start
+        align-content stretch
+        justify-content space-between
+      .link
+        flex-grow 1
+        flex-basis 30%
+        max-width 30%
+        h2
+          font-size 1.4rem
+          font-weight 500
+          border-bottom none
+          padding-bottom 0
+          color lighten($textColor, 10%)
+        p
+          color lighten($textColor, 25%)
+
+    */
+</style>

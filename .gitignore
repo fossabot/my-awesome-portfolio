@@ -2,7 +2,8 @@
 .firebase
 .firebaserc
 firebase.json
-src/.vuepress/dist
+dist
+*.lock
 package-lock.json
 .vuepress/dist/
 
