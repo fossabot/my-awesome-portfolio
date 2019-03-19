@@ -13,7 +13,7 @@
 
             <div class="links p-4 flex justify-between text-xl" v-if="data.links && data.links.length">
                 <div class="link" v-for="(link, index) in data.links" :key="index">
-                    <a :href="link.href" class="hover:text-black">{{ link.title }}</a>
+                    <router-link class="hover:text-black" :to="link.href" exact>{{ link.title }}</router-link>
                 </div>
             </div>
 
@@ -46,8 +46,8 @@
 
 <style lang="stylus">
 
-    .bg-accent
-        background-color $accentColor
+//    .bg-accent
+//        background-color $accentColor
 
     /*
     .home
