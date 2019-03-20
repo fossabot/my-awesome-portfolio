@@ -57,9 +57,11 @@ build:
   preview_command: yarn build
   preview_output_directory: dist
   preview_env:
+    - NODE_ENV=staging
 
   publish_command: yarn build
   output_directory: .vuepress/dist
   publish_env:
+    - NODE_ENV=production
 
   instant_preview_command: yarn dev

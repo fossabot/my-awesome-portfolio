@@ -7,7 +7,7 @@ const connect = require('../setup/connect.json')
 
 module.exports = {
 	base: '/',
-	title: info.siteName,
+	title: info.siteName +  ' ' + process.env.NODE_ENV,
 	description: info.siteDescription,
 	evergreen: true, // Faster on modern browsers. (Disable ES5 transpilation and polyfills for IE)
 	serviceWorker: true,
