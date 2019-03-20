@@ -1,64 +1,54 @@
 ---
 label: Home
 hide_body: true
-is_partial: false
 fields:
+- name: title
+  type: text
+  label: Title
+  hidden: true
+  config:
+    required: true
+- name: heroText
+  type: text
+  label: Hero Text
+  description: Page title
+- name: tagline
+  type: text
+  label: Tag line
+  description: Page tag line
+- name: heroImage
+  type: file
+  label: Hero Image
+  description: Page cover image
+  hidden: true
+- name: links
+  type: field_group_list
+  label: Links
+  description: Page navigation links
+  default: ''
+  fields:
   - name: title
     type: text
     label: Title
-    hidden: true
-    config:
-      required: true
-
-  - name: heroText
-    type: text
-    label: Hero Text
-    description: 'Page title'
-
-  - name: tagline
-    type: text
-    label: Tag line
-    description: 'Page tag line'
-
-  - name: heroImage
-    type: file
-    label: Hero Image
-    description: 'Page cover image'
-    hidden: true
-
-  - name: links
-    type: field_group_list
-    label: Links
-    description: 'Page navigation links'
     default: ''
-    fields:
-      - name: title
-        type: text
-        label: Title
-        default: ''
-
-      - name: href
-        type: text
-        label: Link
-        default: ''
-
-      - name: external
-        type: boolean
-        label: External
-        default: false
-        description: 'open in a new tab'
-
-      - name: draft
-        type: boolean
-        label: Draft
-        default: false
-        description: 'Hide this link on the front page'
-
-  - name: navbar
+  - name: href
+    type: text
+    label: Link
+    default: ''
+  - name: external
     type: boolean
-    label: Navegation Bar
+    label: External
     default: false
-    hidden: true
-
+    description: open in a new tab
+  - name: draft
+    type: boolean
+    label: Draft
+    default: false
+    description: Hide this link on the front page
+- name: navbar
+  type: boolean
+  label: Navegation Bar
+  default: false
+  hidden: true
 pages:
-  - portfolio/index.md
+- portfolio/index.md

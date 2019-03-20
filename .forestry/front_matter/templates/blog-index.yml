@@ -1,20 +1,15 @@
 ---
 label: Blog Home
 hide_body: false
-is_partial: false
 fields:
-  - name: title
-    type: text
-    label: Title
-    default: ''
-    config:
-      required: true
-
-  - name: navbar
-    type: boolean
-    label: Navegation Bar
-    default: false
-    hidden: true
-
-pages:
-  - portfolio/blog/index.md
+- name: title
+  type: text
+  label: Title
+  default: ''
+  config:
+    required: true
+- name: navbar
+  type: boolean
+  label: Navegation Bar
+  default: false
+  hidden: true

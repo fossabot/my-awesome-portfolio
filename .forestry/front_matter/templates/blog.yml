@@ -1,12 +1,10 @@
 ---
 label: Blog
 hide_body: false
-is_partial: false
 fields:
 - name: title
   default: ''
   label: Title
-
   type: text
 - type: textarea
   name: excerpt
