@@ -63,5 +63,5 @@ build:
   output_directory: .vuepress/dist
   publish_env:
     - NODE_ENV=production
-
+    
   instant_preview_command: yarn dev
