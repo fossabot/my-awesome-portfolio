@@ -1,0 +1,20 @@
+---
+label: Sobre
+hide_body: false
+is_partial: false
+fields:
+
+  - name: title
+    type: text
+    label: Title
+    config:
+      required: true
+
+  - name: navbar
+    type: boolean
+    label: Navegation Bar
+    default: false
+    hidden: true
+
+pages:
+  - portfolio/sobre.md

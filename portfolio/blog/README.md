@@ -1,8 +1,11 @@
 ---
-view: posts
 title: Todos posts
-description: 
+view: posts 
+sidebar: true
 ---
+🚧 WIP
+
+Lorem ipsum dolor sit amet, ad cum verear platonem, at mel solum dolores. Vim meis lorem soluta ea, mea no assum eruditi reformidans. Pro inimicus definiebas reprimique ut. Munere noster duo ex.
 
 <script>
 export default {
@@ -14,5 +17,3 @@ export default {
   }
 }
 </script>
-
-Lorem ipsum dolor sit amet, ad cum verear platonem, at mel solum dolores. Vim meis lorem soluta ea, mea no assum eruditi reformidans. Pro inimicus definiebas reprimique ut. Munere noster duo ex.

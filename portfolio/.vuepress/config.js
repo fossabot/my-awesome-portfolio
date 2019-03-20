@@ -9,7 +9,6 @@ module.exports = {
 	base: '/',
 	title: info.siteName,
 	description: info.siteDescription,
-	ga: info.googleAnalytics,
 	evergreen: true, // Faster on modern browsers. (Disable ES5 transpilation and polyfills for IE)
 	serviceWorker: true,
 	markdown: {
@@ -29,7 +28,7 @@ module.exports = {
 	},
 	head,
 	themeConfig: {
-		logo: '',
+		logo: info.logo,
 		activeHeaderLinks: false, // Default: true
 		lastUpdated: false,
 		// lastUpdated: {
@@ -37,10 +36,9 @@ module.exports = {
 		//   format: 'YYYY年MM月DD日' // pattern can refer to moment.js
 		// },
 		nav: [
-			...info.menu.filter(link => ! link.hide)
+			...info.menu.filter(link => !link.draft)
 		],
 		sidebar: [
-			'blog/',
 			...generateBlogSideBar('/blog')
 		],
 		sidebarDepth: 0,
@@ -50,12 +48,15 @@ module.exports = {
 				buttonText: 'Atualizar'
 			}
 		},
-		disqus: 'thgroch',
 		topNavigation: false,
-		searchMaxSuggestions: 7
+		searchMaxSuggestions: 7,
+		disqus:info.disqus
 	},
 	plugins: [
 		'vuepress-plugin-reading-time',
-		'@silvanite/tailwind', {config: './tailwind.js'}
+		'@vuepress/back-to-top',
+		'@silvanite/tailwind', {config: './tailwind.js'},
+		'@vuepress/google-analytics', {ga: info.googleAnalytics},
+		'disqus'
 	]
 }

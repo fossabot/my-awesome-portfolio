@@ -1,9 +1,9 @@
 ---
 view: posts
-title: Meu terceiro post
+title: Snippet Post
 date: 2018-01-12 08:32:30
-tags: [Archlinux, etc]
-category: Archlinux
+tags: []
+category: 
 ---
 
 # Heading 8-)
@@ -63,7 +63,7 @@ Shortcuts (emoticons): :-) :-( 8-) ;)
 ![Cat](https://cataas.com/cat)
 
 ### Vue prerended
-<img :src="$withBase('/images/Avatar.png')" alt="foo">
+<img :src="$withBase('/images/avatar.jpg')" alt="foo">
 
 ## Code
 
@@ -180,19 +180,16 @@ This is the value of `$site.themeConfig`:
 }
 ```
 
-### Badges
-
-<Badge text="beta" type="warn"/>
-<Badge text="0.10.1+"/>
+## HTML Element with Tailwindcss
 
 <div class=" container mx-auto py-10">
     <div class="border m-6 rounded-lg  bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden">
         <div class="sm:flex sm:items-center px-6 py-4">
-            <img class="block h-16 sm:h-24 rounded-full mx-auto mb-4 sm:mb-0 sm:mr-4 sm:ml-0" src="https://api.adorable.io/avatars/196/abott@adorable.png" alt="">
+            <img class="block h-16 sm:h-24 rounded-full mx-auto mb-4 sm:mb-0 sm:mr-4 sm:ml-0" src="https://api.adorable.io/avatars/face/eyes1/nose3/mouth4/8e8895" alt="">
             <div class="text-center sm:text-left sm:flex-grow">
                 <div class="mb-4">
                     <p class="text-xl leading-tight">Jane Doe</p>
-                    <p class="text-sm leading-tight text-grey-dark">Software Developer at SpongeBob LLC.</p>
+                    <p class="text-sm leading-tight text-grey-dark">Software Developer at Acme Company.</p>
                 </div>
                 <div class="flex flex-wrap">
                     <button class=" text-xs font-semibold rounded-full px-4 py-1 mx-3  leading-normal bg-white border border-blue text-blue hover:bg-blue hover:text-white">Call</button>
@@ -202,4 +199,9 @@ This is the value of `$site.themeConfig`:
          </div>
     </div>
 </div>
+
+## Badges
+
+<Badge text="beta" type="warn"/>
+<Badge text="0.10.1+"/>
 

@@ -1,0 +1,63 @@
+---
+label: Site Config
+hide_body: true
+is_partial: false
+fields:
+
+  - name: siteName
+    type: text
+    label: 'Site Name'
+    config:
+      required: true
+
+  - name: siteDescription
+    type: text
+    label: Site Description
+    config:
+      required: true
+
+  - name: logo
+    type: file
+    label: Logo
+    default: ''
+
+  - name: googleAnalytics
+    type: text
+    label: 'Google Analytics'
+    description: 'Code E.g. UA-00000000-0'
+    default: ''
+
+  - name: disqus
+    type: text
+    label: Disqus
+    description: 'Disqus Code'
+    default: ''
+
+  - name: menu
+    type: field_group_list
+    label: Menu
+    description: 'Menu navigation links'
+    default: ''
+    fields:
+      - name: text
+        type: text
+        label: Title
+
+      - name: href
+        type: text
+        label: Link
+
+      - name: external
+        type: boolean
+        label: External
+        default: false
+        description: 'open in a new tab'
+
+      - name: draft
+        type: boolean
+        label: Draft
+        default: false
+        description: 'Hide this link on the front page'
+
+pages:
+  - portfolio/setup/info.json

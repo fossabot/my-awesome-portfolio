@@ -12,8 +12,16 @@
             </p>
 
             <div class="links p-4 flex justify-between text-xl" v-if="data.links && data.links.length">
-                <div class="link" v-for="(link, index) in data.links" :key="index">
-                    <router-link class="hover:text-black" :to="link.href" exact>{{ link.title }}</router-link>
+                <div class="link" v-for="(link, index) in activeLinks" :key="index">
+                    <router-link class="hover:text-black"
+                                 :to="link.href"
+                                 active-class="active"
+                                 v-text="link.title"
+                                 v-if="!link.external"
+                                 exact />
+                    <a v-else
+                       :href="nav.link"
+                       target="_blank">{{ nav.text }}</a>
                 </div>
             </div>
 
@@ -34,6 +42,9 @@
 				return this.$page.frontmatter
 			},
 
+			activeLinks() {
+				return this.data.links.filter(link => ! link.draft)
+			},
 			actionLink() {
 				return {
 					link: this.data.actionLink,

@@ -7,3 +7,5 @@ category: Archlinux
 ---
 
 __Advertisement 2019 :)__
+
+<ClientOnly><Disqus :shortname="$site.themeConfig.disqus" /></ClientOnly>
