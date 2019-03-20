@@ -1,55 +1,65 @@
 ---
 label: Projetos
 hide_body: false
+is_partial: false
 fields:
-- name: title
-  type: text
-  label: Title
-  default: ''
-  config:
-    required: true
-- name: projetos
-  type: field_group_list
-  label: Projetos
-  description: List of works
-  default: ''
-  fields:
   - name: title
     type: text
     label: Title
     default: ''
-  - name: href
-    type: text
-    label: Link
-    default: ''
-  - name: external
-    type: boolean
-    label: External
-    default: true
-    description: open in a new tab
-  - name: description
-    type: text
-    label: Description
-    default: ''
-  - name: date
-    type: datetime
-    label: Date
-    default: ''
     config:
-      date_format: YYYY/MM/DD
       required: true
-  - name: tags
-    type: tag_list
-    label: Tags
-  - name: draft
+
+  - name: projetos
+    type: field_group_list
+    label: Projetos
+    description: 'List of works'
+    default: ''
+    fields:
+      - name: title
+        type: text
+        label: Project Title
+        default: ''
+
+      - name: href
+        type: text
+        label: Project website
+        default: ''
+
+      - name: external
+        type: boolean
+        label: External
+        default: true
+        description: 'open in a new tab'
+
+      - name: description
+        type: text
+        label: Description
+        default: ''
+
+      - name: date
+        type: datetime
+        label: Publish Date
+        default: ''
+        config:
+          date_format: "YYYY/MM/DD"
+          required: true
+
+      - name: tags
+        type: tag_list
+        label: Tags
+
+      - name: draft
+        type: boolean
+        label: Draft
+        default: false
+        description: 'Hide this project on the front page'
+
+  - name: navbar
     type: boolean
-    label: Draft
+    label: Navegation Bar
     default: false
-    description: Hide this project on the front page
-- name: navbar
-  type: boolean
-  label: Navegation Bar
-  default: false
-  hidden: true
+    hidden: true
+
 pages:
-- portfolio/projetos.md
+  - portfolio/projetos.md
