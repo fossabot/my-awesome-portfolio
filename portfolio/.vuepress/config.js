@@ -53,10 +53,10 @@ module.exports = {
 		disqus:info.disqus
 	},
 	plugins: [
-		'vuepress-plugin-reading-time',
-		'@vuepress/back-to-top',
 		'@silvanite/tailwind', {config: './tailwind.js'},
 		'@vuepress/google-analytics', {ga: info.googleAnalytics},
-		'disqus'
+		'disqus',
+		'vuepress-plugin-reading-time',
+		'@vuepress/back-to-top'
 	]
 }

@@ -1,45 +1,49 @@
 {
   "name": "my-awesome-portfolio",
   "version": "1.0.4",
-  "homepage": "https://thomasgroch.com.br/",
   "description": "desenvolvedor autodidata, full-stack, e adepto de convenção sobre configuração.",
-  "author": "Thomas Letsch Groch <thomas.groch@gmail.com>",
+  "keywords": [
+    "blog",
+    "developer",
+    "markdown",
+    "static",
+    "vuejs",
+    "vuepress"
+  ],
+  "homepage": "https://thomasgroch.com.br/",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/thomas.groch/my-awesome-portfolio"
+  },
   "license": "MIT",
+  "author": "Thomas Letsch Groch <thomas.groch@gmail.com>",
   "scripts": {
     "build": "vuepress build portfolio --dest dist",
     "dev": "vuepress dev portfolio --host localhost",
-    "serve": "yarn build && npx http-server dist/ -c-1 -o -a localhost",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore portfolio",
-    "precommit": "yarn lint"
+    "precommit": "yarn lint",
+    "serve": "yarn build && npx http-server dist/ -c-1 -o -a localhost"
+  },
+  "dependencies": {
+    "@stackblitz/sdk": "1.3.0",
+    "axios": "0.18.0",
+    "markdown-it-footnote": "3.0.1",
+    "markdown-it-katex": "^2.0.3",
+    "tailwindcss": "0.7.4",
+    "vuepress": "next"
   },
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "1.0.0-alpha.44",
+    "@silvanite/vuepress-plugin-tailwind": "1.1.0",
     "@vuepress/plugin-google-analytics": "1.0.0-alpha.44",
+    "vuepress-plugin-disqus": "0.1.1",
+    "vuepress-plugin-reading-time": "0.1.1",
+    "@vuepress/plugin-back-to-top": "1.0.0-alpha.44",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^12.0.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-vue": "^4.7.0",
     "gitmoji-cli": "^1.9.2",
-    "humans-generator": "2.1.1",
-    "vuepress-plugin-disqus": "0.1.1"
-  },
-  "dependencies": {
-    "@silvanite/vuepress-plugin-tailwind": "1.1.0",
-    "@stackblitz/sdk": "1.3.0",
-    "axios": "0.18.0",
-    "markdown-it-footnote": "3.0.1",
-    "markdown-it-katex": "^2.0.3",
-    "tailwindcss": "0.7.4",
-    "vuepress": "next",
-    "vuepress-plugin-reading-time": "0.1.1"
-  },
-  "keywords": [
-    "blog",
-    "developer",
-    "vuepress",
-    "markdown",
-    "static",
-    "vuejs"
-  ]
+    "humans-generator": "2.1.1"
+  }
 }
