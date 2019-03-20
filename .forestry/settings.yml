@@ -3,7 +3,6 @@ new_page_extension: md
 auto_deploy: true
 admin_path: portfolio/.vuepress/public/admin
 webhook_url:
-instant_preview: true
 sections:
   - type: document
     path: portfolio/index.md
@@ -42,13 +41,16 @@ public_path: "/upload"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
+instant_preview: true
 build:
-  preview_command: yarn build
-  publish_command: yarn build
+  instant_preview_command: npm run dev
+
+  preview_command: npm run build
+  preview_output_directory: dist
   preview_env:
     - NODE_ENV=staging
+
+  publish_command: npm run build
+  output_directory: dist
   publish_env:
     - NODE_ENV=production
-  preview_output_directory: dist
-  output_directory: ".vuepress/dist"
-  instant_preview_command: yarn dev
