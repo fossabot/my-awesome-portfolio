@@ -19,7 +19,7 @@ fields:
 - name: googleAnalytics
   type: text
   label: Google Analytics
-  description: Code E.g. UA-00000000-0
+  description: 'i.e. UA-00000000-0'
   default: ''
 - name: disqus
   type: text
