@@ -3,7 +3,6 @@
 .firebaserc
 firebase.json
 dist
-*.lock
 package-lock.json
 .vuepress/dist/
 
