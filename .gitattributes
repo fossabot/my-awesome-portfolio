@@ -11,8 +11,3 @@
 
 # Declare files that will always have CRLF line endings on checkout.
 *.sln text eol=crlf
-
-# Denote all files that to Git LFS manage
-*.psd filter=lfs diff=lfs merge=lfs -text
-*.png filter=lfs diff=lfs merge=lfs -text
-*.jpg filter=lfs diff=lfs merge=lfs -text
