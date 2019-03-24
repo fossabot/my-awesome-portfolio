@@ -4,37 +4,37 @@ auto_deploy: true
 admin_path: portfolio/.vuepress/public/admin
 webhook_url:
 sections:
-  - type: document
-    path: portfolio/index.md
-    label: Home
-    templates:
-      - home
-  - type: directory
+  - label: Posts
+    type: directory
     path: portfolio/blog
-    label: Posts
     create: all
     match: portfolio/blog/**/[!index]*
     templates:
       - blog
-  - type: document
+  - label: Projetos
+    type: document
+    path: portfolio/projetos.md
+    templates:
+      - projetos
+  - label: Home
+    type: document
+    path: portfolio/index.md
+    templates:
+      - home
+  - label: Home Blog
+    type: document
     path: portfolio/blog/index.md
-    label: Blog Home
     create: none
     templates:
       - blog-index
-  - type: document
-    path: portfolio/projetos.md
-    label: Projetos
-    templates:
-      - projetos
-  - type: document
+  - label: Sobre
+    type: document
     path: portfolio/sobre.md
-    label: Sobre
     templates:
       - sobre
-  - type: document
+  - label: Site Config
+    type: document
     path: portfolio/setup/info.json
-    label: Site Config
     templates:
       - info
 upload_dir: portfolio/.vuepress/public/upload
