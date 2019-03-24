@@ -2,7 +2,7 @@
 new_page_extension: md
 auto_deploy: true
 admin_path: portfolio/.vuepress/public/admin
-webhook_url:
+webhook_url: 
 sections:
   - label: Posts
     type: directory
@@ -47,9 +47,9 @@ build:
   preview_command: yarn build
   publish_command: yarn build
   preview_env:
-    - NODE_ENV=staging
+  - NODE_ENV=staging
   publish_env:
-    - NODE_ENV=production
+  - NODE_ENV=production
   preview_output_directory: dist
   output_directory: dist
   instant_preview_command: yarn dev
