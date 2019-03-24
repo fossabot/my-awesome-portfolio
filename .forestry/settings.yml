@@ -21,9 +21,9 @@ sections:
     path: portfolio/index.md
     templates:
       - home
-  - label: Home Blog
+  - label: Blog Home
     type: document
-    path: portfolio/blog/index.md
+    path: portfolio/blog/README.md
     create: none
     templates:
       - blog-index
