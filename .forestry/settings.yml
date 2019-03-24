@@ -44,12 +44,12 @@ front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
 build:
-  preview_command: npm run build
-  publish_command: npm run build
+  preview_command: yarn build
+  publish_command: yarn build
   preview_env:
   - NODE_ENV=staging
   publish_env:
   - NODE_ENV=production
   preview_output_directory: dist
   output_directory: dist
-  instant_preview_command: npm run dev
+  instant_preview_command: yarn dev

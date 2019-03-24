@@ -4,7 +4,7 @@ const { readFileSync } = require('fs');
 const { parseFrontmatter } = require('@vuepress/shared-utils')
 
 const generateBlogSideBar = dir => {
-console.log(join(__dirname, '..', dir))
+  // console.log(join(__dirname, '..', dir))
   let files = glob.sync('**/*.md', { cwd: join(__dirname, '..', dir) })
     .filter(p => basename(p) !== 'README.md')
     .map(x => '/blog/' + x)
