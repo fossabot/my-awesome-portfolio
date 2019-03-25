@@ -39,12 +39,12 @@ fields:
     type: text
     label: Link
   - name: external
-    type: boolean
+    type: toggle
     label: External
     default: false
     description: open in a new tab
   - name: draft
-    type: boolean
+    type: toggle
     label: Draft
     default: false
     description: Hide this link on the front page

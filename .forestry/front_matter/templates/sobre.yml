@@ -8,7 +8,7 @@ fields:
   config:
     required: true
 - name: navbar
-  type: boolean
+  type: toggle
   label: Navegation Bar
   default: false
   hidden: true

@@ -23,7 +23,7 @@ fields:
     label: Project website
     default: ''
   - name: external
-    type: boolean
+    type: toggle
     label: External
     default: true
     description: open in a new tab
@@ -46,12 +46,12 @@ fields:
     type: tag_list
     label: Tags
   - name: draft
-    type: boolean
+    type: toggle
     label: Draft
     default: false
     description: Hide this project on the front page
 - name: navbar
-  type: boolean
+  type: toggle
   label: Navegation Bar
   default: false
   hidden: true
