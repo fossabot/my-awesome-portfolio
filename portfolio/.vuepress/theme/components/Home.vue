@@ -1,7 +1,7 @@
 <template>
-    <main class="home flex items-center justify-center h-full" aria-labelledby="main-title">
+    <main class="home flex items-center h-full justify-center" aria-labelledby="main-title">
 
-        <header class="hero uppercase font-nunito px-4 py-2 m-2 w-1/2">
+        <header class="hero uppercase font-nunito px-4 py-2 m-2">
 
             <img v-if="data.heroImage" class="rounded shadow-lg" :src="$withBase(data.heroImage)" :alt="data.heroAlt || 'hero'" />
 

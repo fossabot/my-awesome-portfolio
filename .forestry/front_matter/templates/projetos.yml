@@ -28,9 +28,13 @@ fields:
     default: true
     description: open in a new tab
   - name: description
-    type: text
+    type: textarea
     label: Description
     default: ''
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
   - name: date
     type: datetime
     label: Publish Date
