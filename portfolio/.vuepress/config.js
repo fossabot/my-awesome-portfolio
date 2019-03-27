@@ -54,9 +54,9 @@ module.exports = {
 	},
 	plugins: [
 		'@silvanite/tailwind', {config: './tailwind.js'},
-		// '@vuepress/google-analytics', {ga: info.googleAnalytics},
-		// 'disqus',
-		// 'vuepress-plugin-reading-time',
-		// '@vuepress/back-to-top'
+		'@vuepress/google-analytics', {ga: info.googleAnalytics},
+		'disqus',
+		'vuepress-plugin-reading-time',
+		'@vuepress/back-to-top'
 	]
 }
