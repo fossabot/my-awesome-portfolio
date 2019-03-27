@@ -41,7 +41,7 @@ fields:
     default: ''
     required: true
     config:
-      date_format: "YYYY-MM-DD"
+      date_format: YYYY-MM-DD
       display_utc: false
   - name: tags
     type: tag_list
