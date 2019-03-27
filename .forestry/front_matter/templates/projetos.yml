@@ -50,7 +50,7 @@ fields:
     type: boolean
     label: Draft
     default: false
-    description: Hide this project on the front page
+    description: Hide this project on the projects page
 - name: navbar
   type: boolean
   label: Navegation Bar

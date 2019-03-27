@@ -64,7 +64,7 @@
 		}
 	}
 </script>
-<style>
+<style scoped>
     span:before {
         content: "+";
     }

@@ -35,10 +35,10 @@
     "tailwindcss": "0.7.4",
     "vuepress": "next",
     "vuepress-plugin-disqus": "0.1.1",
-    "vuepress-plugin-reading-time": "0.1.1"
+    "vuepress-plugin-reading-time": "0.1.1",
+    "axios": "0.18.0"
   },
   "devDependencies": {
-    "axios": "0.18.0",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^12.0.0",
     "eslint-friendly-formatter": "^3.0.0",
