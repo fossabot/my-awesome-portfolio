@@ -39,9 +39,10 @@ fields:
     type: datetime
     label: Publish Date
     default: ''
+    required: true
     config:
-      date_format: YYYY/MM/DD
-      required: true
+      date_format: "YYYY-MM-DD"
+      display_utc: false
   - name: tags
     type: tag_list
     label: Tags

@@ -3,50 +3,30 @@
             class="theme-container"
             :class="pageClasses"
             @touchstart="onTouchStart"
-            @touchend="onTouchEnd"
-    >
-        <Navbar
-                v-if="shouldShowNavbar"
-                @toggle-sidebar="toggleSidebar"
-        />
+            @touchend="onTouchEnd">
+        <Navbar v-if="shouldShowNavbar"
+                @toggle-sidebar="toggleSidebar"/>
 
-        <div
-                class="sidebar-mask"
-                @click="toggleSidebar(false)"
-        ></div>
+        <div class="sidebar-mask"
+             @click="toggleSidebar(false)"></div>
 
-        <Sidebar
-                :items="sidebarItems"
-                @toggle-sidebar="toggleSidebar"
-        >
-            <slot
-                    name="sidebar-top"
-                    slot="top"
-            />
-            <slot
-                    name="sidebar-bottom"
-                    slot="bottom"
-            />
+        <Sidebar :items="sidebarItems"
+                 @toggle-sidebar="toggleSidebar">
+            <slot name="sidebar-top" slot="top" />
+            <slot name="sidebar-bottom" slot="bottom" />
         </Sidebar>
 
-        <Home v-if="$page.frontmatter.home"/>
+        <Home v-if="$page.frontmatter.home" />
 
-        <Page
-                v-else
-                :sidebar-items="sidebarItems"
-        >
-            <slot
-                    name="page-top"
-                    slot="top"
-            />
-            <slot
-                    name="page-bottom"
-                    slot="bottom"
-            />
+        <BaseProjeto v-else-if="$page.frontmatter.projetos" />
+
+        <Page v-else :sidebar-items="sidebarItems">
+            <slot name="page-top" slot="top" />
+            <slot name="page-bottom" slot="bottom" />
         </Page>
+
     </div>
 </template>
-
 <script>
 	import Home from '@theme/components/Home.vue'
 	import Navbar from '@theme/components/Navbar.vue'
@@ -148,8 +128,10 @@
 
 <style src="prismjs/themes/prism-tomorrow.css"></style>
 <style src="@parent-theme/styles/theme.styl" lang="stylus"></style>
-<style>
-    p{
-        margin: 0
-    }
+<style lang="stylus">
+main
+    padding $navbarHeight 2rem 0
+    //max-width 960px
+    margin 0px auto
+    display block
 </style>
