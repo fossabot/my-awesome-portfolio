@@ -9,7 +9,7 @@ sections:
     label: Posts
     create: all
     match: portfolio/blog/**/*
-    exclude: {portfolio/blog/README.md, portfolio/blog/index.md}
+    exclude: "{portfolio/blog/README.md, portfolio/blog/index.md}"
     templates:
       - blog
   - type: document
