@@ -8,7 +8,7 @@ sections:
   path: portfolio/blog
   label: Posts
   create: all
-  match: portfolio/blog/**/*
+  match: portfolio/blog/*
   templates:
   - blog
 - type: document
