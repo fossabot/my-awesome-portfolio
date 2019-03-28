@@ -52,8 +52,8 @@
 		computed: {
 			displayImage() {
 				return 'https://http2pic.haschek.at/api.php?' +
-					'onfail=' + this.host + '/images/no-image.svg' +
-					'&ondomainfail=' + this.host + '/images/no-image.svg' +
+					'onfail=' + encodeURI(this.host + '/images/no-image.svg') +
+					'&ondomainfail=' + encodeURI(this.host + '/images/no-image.svg') +
 					'&js=yes' +
 					'&type=png' +
 					'&cache=1' +
