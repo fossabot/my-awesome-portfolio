@@ -9,7 +9,7 @@ sections:
   label: Posts
   create: all
   match: "**/*"
-  exclude: "**/*/{index,README}.md"
+  exclude: "**/{index,README}.md"
   new_doc_ext: md
   templates:
   - blog
