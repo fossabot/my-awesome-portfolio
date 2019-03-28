@@ -2,40 +2,40 @@
 new_page_extension: md
 auto_deploy: true
 admin_path: portfolio/.vuepress/public/admin
-webhook_url:
+webhook_url: 
 sections:
-  - type: directory
-    path: portfolio/blog
-    label: Posts
-    create: all
-    match: portfolio/blog/**/[!index|README]*
-    templates:
-      - blog
-  - type: document
-    path: portfolio/projetos.md
-    label: Projetos
-    templates:
-      - projetos
-  - type: document
-    path: portfolio/index.md
-    label: Home
-    templates:
-      - home
-  - type: document
-    path: portfolio/blog/README.md
-    label: Blog Home
-    templates:
-      - blog-index
-  - type: document
-    path: portfolio/sobre.md
-    label: Sobre
-    templates:
-      - sobre
-  - type: document
-    path: portfolio/setup/info.json
-    label: Site Config
-    templates:
-      - info
+- type: directory
+  path: portfolio/blog
+  label: Posts
+  create: all
+  match: portfolio/blog/**/[!index|README]*
+  templates:
+  - blog
+- type: document
+  path: portfolio/projetos.md
+  label: Projetos
+  templates:
+  - projetos
+- type: document
+  path: portfolio/index.md
+  label: Home
+  templates:
+  - home
+- type: document
+  path: portfolio/blog/README.md
+  label: Blog Home
+  templates:
+  - blog-index
+- type: document
+  path: portfolio/sobre.md
+  label: Sobre
+  templates:
+  - sobre
+- type: document
+  path: portfolio/setup/info.json
+  label: Site Config
+  templates:
+  - info
 upload_dir: portfolio/.vuepress/public/upload
 public_path: "/upload"
 front_matter_path: ''
@@ -46,9 +46,9 @@ build:
   preview_command: yarn build
   publish_command: yarn build
   preview_env:
-    - NODE_ENV=staging
+  - NODE_ENV=staging
   publish_env:
-    - NODE_ENV=production
+  - NODE_ENV=production
   preview_output_directory: dist
   output_directory: dist
   instant_preview_command: yarn dev
