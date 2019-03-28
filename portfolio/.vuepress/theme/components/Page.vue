@@ -31,8 +31,7 @@
                 </span>
             </p>
         </div>
-
-        <div class="text-center" v-if="$page.frontmatter.view && $page.frontmatter.view === 'posts'">
+        <div class="text-center" v-if="$page.frontmatter.view && $page.frontmatter.view === 'posts' && $page.path !== '/blog/'">
             <ClientOnly>
                 <Disqus
                         :shortname="$site.themeConfig.disqus"
