@@ -27,3 +27,5 @@ fields:
   label: Internal page type
   default: posts
   hidden: true
+pages:
+- portfolio/blog/testando.md
