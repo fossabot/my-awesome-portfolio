@@ -18,3 +18,5 @@ fields:
   type: datetime
   config:
     required: true
+pages:
+- portfolio/blog/teste.md
