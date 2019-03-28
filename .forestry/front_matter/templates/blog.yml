@@ -2,21 +2,30 @@
 label: Blog
 hide_body: false
 fields:
-- name: title
-  default: ''
-  label: Title
-  type: text
-- type: textarea
-  name: excerpt
-  label: Excerpt
-  config:
+  - name: title
+    default: ''
+    label: Title
+    type: text
+  - name: date
+    type: datetime
+    label: Publish Date
+    default: ''
     required: true
-- name: date
-  default: ''
-  label: Date
-  hidden: true
-  type: datetime
-  config:
-    required: true
+    config:
+      date_format: YYYY-MM-DD
+      display_utc: false
+  - name: tags
+    type: tag_list
+    label: Tags
+  - name: draft
+    type: boolean
+    label: Draft
+    default: false
+    description: Hide this post from blog
+  - name: view
+    type: text
+    label: Internal page type
+    default: 'posts'
+    hidden: true
 pages:
-- portfolio/blog/teste.md
+  - portfolio/blog/teste.md
