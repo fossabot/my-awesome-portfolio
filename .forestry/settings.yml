@@ -9,7 +9,7 @@ sections:
   label: Posts
   create: all
   match: portfolio/blog/**/*
-  new_doc_ext: ".md"
+  new_doc_ext: md
   templates:
   - blog
 - type: document
