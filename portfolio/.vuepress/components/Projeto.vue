@@ -40,18 +40,20 @@
 			description: String,
 			date: String,
 			tags: {
-				type: String,
+				type: Array,
 				required: true
 			}
 		},
+		beforeMount(){
+			const protocol = location.protocol
+			const slashes = protocol.concat('//')
+			this.host = slashes.concat(window.location.hostname)
+        },
 		computed: {
 			displayImage() {
-				const protocol = location.protocol
-				const slashes = protocol.concat('//')
-				const host = slashes.concat(window.location.hostname)
 				return 'https://http2pic.haschek.at/api.php?' +
-					'onfail=' + host + '/images/no-image.svg' +
-					'&ondomainfail=' + host + '/images/no-image.svg' +
+					'onfail=' + this.host + '/images/no-image.svg' +
+					'&ondomainfail=' + this.host + '/images/no-image.svg' +
 					'&js=yes' +
 					'&type=png' +
 					'&cache=1' +
@@ -65,7 +67,9 @@
 			}
 		},
 		data() {
-			return {}
+			return {
+				host: ''
+            }
 		}
 	}
 </script>

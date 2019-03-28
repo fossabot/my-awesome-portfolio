@@ -32,8 +32,8 @@ module.exports = {
 		activeHeaderLinks: false, // Default: true
 		lastUpdated: false,
 		// lastUpdated: {
-		//   label: 'Última atualização', // string
-		//   format: 'YYYY年MM月DD日' // pattern can refer to moment.js
+		//   label: 'Última atualização',
+		//   format: 'YYYY年MM月DD日'
 		// },
 		nav: [
 			...info.menu.filter(link => !link.draft)
@@ -50,7 +50,8 @@ module.exports = {
 		},
 		topNavigation: false,
 		searchMaxSuggestions: 7,
-		disqus:info.disqus
+		disqus: info.disqus,
+		disqusApiKey: info.disqusApiKey
 	},
 	plugins: [
 		'@silvanite/tailwind', {config: './tailwind.js'},

@@ -5,8 +5,8 @@
 
         <div class="flex mb-4 flex-wrap justify-center">
             <Projeto
-                    v-for="projeto in shouldShowProjects"
-                    :key="projeto.title"
+                    v-for="(projeto, i) in shouldShowProjects"
+                    :key="`${i}-${projeto.title}`"
                     :title="projeto.title"
                     :href="projeto.href"
                     :description="projeto.description"
