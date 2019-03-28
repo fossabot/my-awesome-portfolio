@@ -54,7 +54,7 @@
 	export default {
 		props: ['sidebarItems'],
 
-		created(){
+		beforeMount(){
 			const protocol = location.protocol
 			const slashes = protocol.concat('//')
 			this.host = slashes.concat(window.location.hostname)
