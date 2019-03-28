@@ -8,7 +8,7 @@ sections:
   path: portfolio/blog
   label: Posts
   create: all
-  match: portfolio/blog/**/*
+  match: "**/*"
   new_doc_ext: md
   templates:
   - blog
