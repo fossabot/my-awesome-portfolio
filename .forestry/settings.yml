@@ -8,7 +8,8 @@ sections:
     path: portfolio/blog
     label: Posts
     create: all
-    match: portfolio/blog/**/[!index|README]*
+    match: portfolio/blog/**/*
+    exclude: {portfolio/blog/README.md, portfolio/blog/index.md}
     templates:
       - blog
   - type: document
