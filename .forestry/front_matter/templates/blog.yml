@@ -10,8 +10,8 @@ fields:
   type: datetime
   label: Publish Date
   default: ''
-  required: true
   config:
+    required: true
     date_format: YYYY-MM-DD
     display_utc: false
 - name: tags
