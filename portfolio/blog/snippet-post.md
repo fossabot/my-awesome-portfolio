@@ -2,7 +2,7 @@
 view: posts
 title: Snippet Post
 date: 2018-01-12 08:32:30
-tags: 
+tags: []
 ---
 
 # Heading 8-)
