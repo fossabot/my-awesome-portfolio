@@ -1,31 +1,34 @@
 <template>
-    <main class="home flex items-center h-full justify-center" aria-labelledby="main-title">
+    <main class="home flex flex-1 items-center justify-center flex-col w-full" aria-labelledby="main-title">
 
         <header class="hero uppercase font-nunito px-4 py-2 m-2">
 
-            <img v-if="data.heroImage" class="rounded shadow-lg" :src="$withBase(data.heroImage)" :alt="data.heroAlt || 'hero'" />
+            <img v-if="data.heroImage" class="rounded shadow-lg" :src="$withBase(data.heroImage)"
+                 :alt="data.heroAlt || 'hero'"/>
 
-            <h1 class="text-5xl font-nunito text-3xl" v-if="data.heroText !== null" id="main-title">{{ data.heroText || $title || 'Hello' }}</h1>
+            <h1 class="font-nunito text-2xl sm:text-3xl" v-if="data.heroText !== null" id="main-title">{{ data.heroText ||
+                $title || 'Hello' }}</h1>
 
-            <p class="description my-6 mx-auto leading-tight text-2xl ">
+            <p class="description my-6 mx-auto leading-tight font-nunito text-xl md:text-2xl">
                 {{ data.tagline || $description || 'Welcome to your VuePress site' }}
             </p>
 
-            <div class="links p-4 flex justify-between text-xl" v-if="data.links && data.links.length">
+            <div class="links py-10 h-full sm:text-xl sm:flex sm:flex-row sm:justify-between"
+                 v-if="data.links && data.links.length">
                 <div class="link" v-for="(link, index) in activeLinks" :key="index">
                     <router-link class="hover:text-black"
                                  :to="link.href"
                                  active-class="active"
                                  v-text="link.title"
                                  v-if="!link.external"
-                                 exact />
+                                 exact/>
                     <a v-else
                        :href="nav.link"
                        target="_blank">{{ nav.text }}</a>
                 </div>
             </div>
 
-            <Content class="flex justify-center p-0"/>
+            <Content class="flex justify-between"/>
 
         </header>
     </main>
@@ -43,7 +46,7 @@
 			},
 
 			activeLinks() {
-				return this.data.links.filter(link => ! link.draft)
+				return this.data.links.filter(link => !link.draft)
 			},
 			actionLink() {
 				return {
@@ -57,8 +60,8 @@
 
 <style lang="stylus">
 
-//    .bg-accent
-//        background-color $accentColor
+    //    .bg-accent
+    //        background-color $accentColor
 
     /*
     .home

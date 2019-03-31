@@ -1,5 +1,5 @@
 <template>
-    <div class="rounded overflow-hidden shadow-lg my-5 mx-5 w-1/3 flex-none">
+    <div class="rounded overflow-hidden shadow-lg my-5 mx-5 w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 flex-none">
         <img class="w-full" :src="displayImage" :alt="title">
         <div class="px-6 py-4">
             <div class="mb-2 font-nunito flex items-center justify-between leading-tight">

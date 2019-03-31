@@ -134,4 +134,12 @@ main
     //max-width 960px
     margin 0px auto
     display block
+
+    .content:not(.custom) > *:first-child
+        margin-top 0
+
+    .content:not(.custom) {
+        padding: 0;
+    }
+
 </style>
