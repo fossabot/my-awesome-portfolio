@@ -1,7 +1,6 @@
 ---
 home: true
 heroText: Eu sou Thomas Letsch Groch,
-tagline: desenvolvedor autodidata, full-stack, e adepto de convenção sobre configuração.
 links:
 - href: blog/index.html
   title: blog
