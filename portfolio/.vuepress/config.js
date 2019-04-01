@@ -54,7 +54,6 @@ module.exports = {
 		disqusApiKey: info.disqusApiKey
 	},
 	plugins: [
-		'@silvanite/tailwind', {config: './tailwind.js'},
 		'@vuepress/google-analytics', {ga: info.googleAnalytics},
 		'disqus',
 		'vuepress-plugin-reading-time',

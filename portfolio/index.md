@@ -15,7 +15,7 @@ navbar: false
 title: ''
 heroImage: ''
 ---
-
+<Home/>
 github: 
 <repository-count />
 

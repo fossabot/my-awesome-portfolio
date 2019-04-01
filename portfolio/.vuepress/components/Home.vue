@@ -1,5 +1,5 @@
 <template>
-    <main class="home flex flex-1 items-center justify-center flex-col w-full" aria-labelledby="main-title">
+    <main class="page home flex flex-1 items-center justify-center flex-col w-full" aria-labelledby="main-title">
 
         <header class="hero uppercase font-nunito px-4 py-2 m-2">
 
@@ -16,9 +16,9 @@
             <div class="links py-10 h-full sm:text-xl sm:flex sm:flex-row sm:justify-between"
                  v-if="data.links && data.links.length">
                 <div class="link" v-for="(link, index) in activeLinks" :key="index">
-                    <router-link class="hover:text-black"
-                                 :to="link.href"
+                    <router-link class="hover:text-black sm:py-10"
                                  active-class="active"
+                                 :to="link.href"
                                  v-text="link.title"
                                  v-if="!link.external"
                                  exact/>
@@ -27,19 +27,12 @@
                        target="_blank">{{ nav.text }}</a>
                 </div>
             </div>
-
-            <Content class="flex justify-between"/>
-
         </header>
     </main>
 </template>
 
 <script>
-	import NavLink from '@theme/components/NavLink.vue'
-
 	export default {
-		components: {NavLink},
-
 		computed: {
 			data() {
 				return this.$page.frontmatter

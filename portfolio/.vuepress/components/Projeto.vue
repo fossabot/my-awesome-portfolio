@@ -35,7 +35,8 @@
 			},
 			href: {
 				type: String,
-				required: true
+				required: true,
+				default: () => '#'
 			},
 			description: String,
 			date: String,

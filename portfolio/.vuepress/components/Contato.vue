@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <main class="flex flex-col">
         <form class="w-full max-w-md font-nunito"
               @submit.prevent="validateBeforeSubmit">
             <div class="flex flex-wrap -mx-3 mb-6">
@@ -102,7 +102,7 @@
                 </div>
             </div>
         </form>
-    </div>
+    </main>
 </template>
 <script>
 	import VueTextareaAutosize from 'vue-textarea-autosize'
@@ -127,15 +127,15 @@
 				let result = false
 				try {
 					result = await this.$validator.validateAll()
-                    if(!result){
-                    	throw new Error("Form is not valid")
+					if (!result) {
+						throw new Error('Form is not valid')
 					}
-                    console.log("result: "+ result)
-				}catch (error) {
-                    console.log(error)
-                    return
+					console.log('result: ' + result)
+				} catch (error) {
+					console.log(error)
+					return
 				}
-				console.log("result: "+ result)
+				console.log('result: ' + result)
 				console.log('Form Submitted!')
 			},
 

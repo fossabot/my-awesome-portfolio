@@ -2,6 +2,7 @@
 title: Sobre
 sidebar: false
 ---
+# Sobre page title
 
 🚧 WIP
 

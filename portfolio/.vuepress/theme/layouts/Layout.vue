@@ -12,17 +12,13 @@
 
         <Sidebar :items="sidebarItems"
                  @toggle-sidebar="toggleSidebar">
-            <slot name="sidebar-top" slot="top" />
-            <slot name="sidebar-bottom" slot="bottom" />
+            <slot name="sidebar-top" slot="top"/>
+            <slot name="sidebar-bottom" slot="bottom"/>
         </Sidebar>
 
-        <Home v-if="$page.frontmatter.home" />
-
-        <BaseProjeto v-else-if="$page.frontmatter.projetos" />
-
-        <Page v-else :sidebar-items="sidebarItems">
-            <slot name="page-top" slot="top" />
-            <slot name="page-bottom" slot="bottom" />
+        <Page :sidebar-items="sidebarItems">
+            <slot name="page-top" slot="top"/>
+            <slot name="page-bottom" slot="bottom"/>
         </Page>
 
     </div>
@@ -128,18 +124,3 @@
 
 <style src="prismjs/themes/prism-tomorrow.css"></style>
 <style src="@parent-theme/styles/theme.styl" lang="stylus"></style>
-<style lang="stylus">
-main
-    padding $navbarHeight 2rem 0
-    //max-width 960px
-    margin 0px auto
-    display block
-
-    .content:not(.custom) > *:first-child
-        margin-top 0
-
-    .content:not(.custom) {
-        padding: 0;
-    }
-
-</style>
