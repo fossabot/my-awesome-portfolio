@@ -1,5 +1,5 @@
 <template>
-    <main class="flex flex-col">
+    <main class="mt-5 flex flex-col">
         <form class="w-full max-w-md font-nunito"
               @submit.prevent="validateBeforeSubmit">
             <div class="flex flex-wrap -mx-3 mb-6">

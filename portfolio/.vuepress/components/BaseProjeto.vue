@@ -1,5 +1,5 @@
 <template>
-    <main class="page flex flex-col">
+    <main class="mt-5 flex flex-col">
 
         <div class="flex mb-4 flex-wrap justify-center">
             <Projeto
