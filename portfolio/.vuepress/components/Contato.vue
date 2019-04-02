@@ -19,23 +19,49 @@
 
                 </div>
             </div>
-            <div class="flex flex-wrap -mx-3 mb-6">
-                <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+
+
+            <div class="flex flex-wrap -mx-3 mb-2"
+                 v-show="hasFilled('nome')">
+                <div class="w-full px-3 mb-6 md:mb-0"
+                     :class="{'input': true, 'md:w-1/2': hasFilled('email') }">
 
                     <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
                            for="grid-email">E-mail</label>
-                    <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                           :class="{'input': true, 'border-red': errors.has('email') }"
-                           name="email"
-                           v-model="email"
-                           v-validate="'required|email'"
-                           id="grid-email"
-                           type="text">
-                    <p class="text-red text-xs italic"
-                       v-if="errors.has('email')">{{ errors.first('email') }}</p>
+                    <div class="relative">
+                        <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                               :class="{'input': true, 'border-red': errors.has('email') }"
+                               name="email"
+                               v-model="email"
+                               v-validate="'required|email'"
+                               id="grid-email"
+                               type="text">
+                        <p class="text-red text-xs italic"
+                           v-if="errors.has('email')">{{ errors.first('email') }}</p>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0"
+                     v-show="hasFilled('email')">
+
+                    <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+                           for="grid-telefone">Telefone</label>
+                    <div class="relative">
+                        <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                               :class="{'input': true, 'border-red': errors.has('telefone') }"
+                               name="telefone"
+                               v-model="telefone"
+                               v-validate="'required'"
+                               id="grid-telefone"
+                               type="text">
+                        <p class="text-red text-xs italic"
+                           v-if="errors.has('telefone')">{{ errors.first('telefone') }}</p>
+                    </div>
 
                 </div>
             </div>
+
+
             <div class="flex flex-wrap -mx-3 mb-6">
                 <div class="w-full px-3">
 
@@ -55,9 +81,11 @@
 
                 </div>
             </div>
+
             <div class="flex flex-wrap -mx-3 mb-2"
-                 v-show=" ! errors.has('mensagem') && mensagem">
-                <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                 v-show="hasFilled('mensagem')">
+                <div class="w-full px-3 mb-6 md:mb-0"
+                     :class="{'input': true, 'md:w-1/2': hasFilled('estado') }">
 
                     <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
                            for="grid-estado">Estado</label>
@@ -72,7 +100,8 @@
                     </div>
 
                 </div>
-                <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0" v-if="estado">
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0"
+                     v-if="hasFilled('estado')">
 
                     <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
                            for="grid-cidade">Cidade</label>
@@ -92,6 +121,7 @@
 
                 </div>
             </div>
+
             <div class="w-full px-3 mb-6 md:mb-0">
                 <div class="flex items-center justify-center px-3 my-6 md:mb-0 items-center">
 
@@ -116,6 +146,7 @@
 			return {
 				nome: null,
 				email: null,
+				telefone: null,
 				estado: null,
 				cidade: null,
 				mensagem: '',
@@ -139,6 +170,9 @@
 				console.log('Form Submitted!')
 			},
 
+			hasFilled(field) {
+				return (!this.errors.has(field) && this[field])
+			},
 			textareaResize() {
 				this.$refs.textarea.style.minHeight = this.$refs.textarea.scrollHeight + 'px'
 			},
