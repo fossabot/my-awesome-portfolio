@@ -2,8 +2,8 @@
     <main class="mt-5 flex flex-col">
         <form class="w-full max-w-md font-nunito"
               @submit.prevent="validateBeforeSubmit">
-            <div class="flex flex-wrap -mx-3 mb-6">
-                <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+            <div class="flex flex-wrap -mx-3 mb-2">
+                <div class="w-full md:w-full px-3 mb-3 md:mb-0">
 
                     <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
                            for="grid-nome">Nome Completo</label>
@@ -23,7 +23,7 @@
 
             <div class="flex flex-wrap -mx-3 mb-2"
                  v-show="hasFilled('nome')">
-                <div class="w-full px-3 mb-6 md:mb-0"
+                <div class="w-full px-3 mb-2 md:mb-0"
                      :class="{'input': true, 'md:w-1/2': hasFilled('email') }">
 
                     <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
@@ -39,9 +39,10 @@
                         <p class="text-red text-xs italic"
                            v-if="errors.has('email')">{{ errors.first('email') }}</p>
                     </div>
+
                 </div>
 
-                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0"
+                <div class="w-full md:w-1/2 px-3 mb-3 md:mb-0"
                      v-show="hasFilled('email')">
 
                     <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
@@ -62,7 +63,7 @@
             </div>
 
 
-            <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="flex flex-wrap -mx-3 mb-3">
                 <div class="w-full px-3">
 
                     <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
@@ -84,7 +85,7 @@
 
             <div class="flex flex-wrap -mx-3 mb-2"
                  v-show="hasFilled('mensagem')">
-                <div class="w-full px-3 mb-6 md:mb-0"
+                <div class="w-full px-3 mb-3 md:mb-0"
                      :class="{'input': true, 'md:w-1/2': hasFilled('estado') }">
 
                     <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
@@ -100,7 +101,7 @@
                     </div>
 
                 </div>
-                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0"
+                <div class="w-full md:w-1/2 px-3 mb-3 md:mb-0"
                      v-if="hasFilled('estado')">
 
                     <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
@@ -122,7 +123,7 @@
                 </div>
             </div>
 
-            <div class="w-full px-3 mb-6 md:mb-0">
+            <div class="w-full px-3 mb-3 md:mb-0">
                 <div class="flex items-center justify-center px-3 my-6 md:mb-0 items-center">
 
                     <button class="shadow bg-green hover:bg-green-dark focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"

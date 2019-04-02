@@ -1,5 +1,5 @@
 <template>
-    <main class="page home flex flex-1 items-center justify-center flex-col w-full" aria-labelledby="main-title">
+    <main class="flex-col w-full" aria-labelledby="main-title">
 
         <header class="hero uppercase font-nunito px-4 py-2 m-2">
 
@@ -13,10 +13,10 @@
                 {{ data.tagline || $description || 'Welcome to your VuePress site' }}
             </p>
 
-            <div class="links py-10 h-full sm:text-xl sm:flex sm:flex-row sm:justify-between"
+            <div class="links py-2 h-full sm:text-xl sm:flex sm:flex-row sm:justify-between"
                  v-if="data.links && data.links.length">
-                <div class="link" v-for="(link, index) in activeLinks" :key="index">
-                    <router-link class="hover:text-black sm:py-10"
+                <div class="link py-3" v-for="(link, index) in activeLinks" :key="index">
+                    <router-link class="hover:text-black py-10"
                                  active-class="active"
                                  :to="link.href"
                                  v-text="link.title"
@@ -51,8 +51,7 @@
 	}
 </script>
 
-<style lang="stylus">
-
+<style lang="stylus" scoped>
     //    .bg-accent
     //        background-color $accentColor
 

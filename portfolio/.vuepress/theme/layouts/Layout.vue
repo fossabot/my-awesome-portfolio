@@ -1,14 +1,12 @@
 <template>
-    <div
-            class="theme-container"
-            :class="pageClasses"
-            @touchstart="onTouchStart"
-            @touchend="onTouchEnd">
-        <Navbar v-if="shouldShowNavbar"
-                @toggle-sidebar="toggleSidebar"/>
+    <div class="theme-container"
+         :class="pageClasses"
+         @touchstart="onTouchStart"
+         @touchend="onTouchEnd">
 
-        <div class="sidebar-mask"
-             @click="toggleSidebar(false)"></div>
+        <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
+
+        <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
 
         <Sidebar :items="sidebarItems"
                  @toggle-sidebar="toggleSidebar">
@@ -124,3 +122,8 @@
 
 <style src="prismjs/themes/prism-tomorrow.css"></style>
 <style src="@theme/styles/theme.styl" lang="stylus"></style>
+<style lang="stylus" scoped>
+    main
+        margin 0 !important
+        padding 0 !important
+</style>
