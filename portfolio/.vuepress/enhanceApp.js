@@ -1,6 +1,6 @@
 import VeeValidate, {Validator} from 'vee-validate'
 import locale from './vee-validate-locales/pt_BR'
-5
+
 export default ({
 					Vue, // the version of Vue being used in the VuePress app
 					options, // the options for the root Vue instance
