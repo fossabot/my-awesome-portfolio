@@ -2,7 +2,9 @@
     <main class="page">
         <slot name="top"/>
 
+        <Content slot-key="header" class="custom"/>
         <Content/>
+        <Content slot-key="footer" class="custom"/>
 
         <footer class="page-edit">
             <div class="edit-link" v-if="editLink">

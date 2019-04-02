@@ -15,19 +15,19 @@ projetos:
   - aws
   external: true
 - title: Projeto
-  href: https://asd.com
+  href: #
   description: 'Description #2'
   date: 2018-04-12
   tags:
   - Archlinux
 - title: Projeto
-  href: https://asd.com
+  href: #
   description: 'Description #3'
   date: 2018-04-12
   tags:
   - Archlinux
 - title: Projeto
-  href: https://asd.com
+  href: #
   description: 'Description #4'
   date: 2018-04-12
   tags:
@@ -41,4 +41,6 @@ view: projeto
 
 Lorem ipsum dolor sit amet, ad cum verear platonem, at mel solum dolores. Vim meis lorem soluta ea, mea no assum eruditi reformidans. Pro inimicus definiebas reprimique ut. Munere noster duo ex.
 
+::: slot footer
 <BaseProjeto/>
+:::

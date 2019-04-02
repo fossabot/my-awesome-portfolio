@@ -14,12 +14,11 @@ navbar: false
 title: ''
 heroImage: ''
 ---
+::: slot header
 <Home/>
-github: 
-<repository-count />
+:::
 
-gist:
-<repository-count provider="gist" />
+::: slot footer
+<BaseRepository/>
+:::
 
-gitlab:
-<repository-count provider="gitlab" />

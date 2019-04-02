@@ -23,7 +23,11 @@
 		computed: {
 			shouldShowProjects() {
 				return [
-					...this.$page.frontmatter.projetos.filter(project => !project.draft)
+					...this.$page.frontmatter.projetos
+                        .filter(project => {
+                            return (project.href && project.href !== '#')
+						})
+                        .filter(project => ! project.draft)
 				]
 			},
 

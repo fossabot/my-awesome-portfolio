@@ -1,33 +1,36 @@
 <template>
-    <main class="flex-col w-full" aria-labelledby="main-title">
+    <main class="mt-5 flex flex-col" aria-labelledby="main-title">
+        <div class="flex mb-4 flex-wrap justify-center">
 
-        <header class="hero uppercase font-nunito px-4 py-2 m-2">
+            <header class="hero uppercase font-nunito px-4 py-2 m-2">
 
-            <img v-if="data.heroImage" class="rounded shadow-lg" :src="$withBase(data.heroImage)"
-                 :alt="data.heroAlt || 'hero'"/>
+                <img v-if="data.heroImage" class="rounded shadow-lg" :src="$withBase(data.heroImage)"
+                     :alt="data.heroAlt || 'hero'"/>
 
-            <h1 class="font-nunito text-2xl sm:text-3xl" v-if="data.heroText !== null" id="main-title">{{ data.heroText ||
-                $title || 'Hello' }}</h1>
+                <h1 class="font-nunito text-2xl sm:text-3xl" v-if="data.heroText !== null" id="main-title">{{
+                    data.heroText ||
+                    $title || 'Hello' }}</h1>
 
-            <p class="description my-6 mx-auto leading-tight font-nunito text-xl md:text-2xl">
-                {{ data.tagline || $description || 'Welcome to your VuePress site' }}
-            </p>
+                <p class="description my-6 mx-auto leading-tight font-nunito text-xl md:text-2xl">
+                    {{ data.tagline || $description || 'Welcome to your VuePress site' }}
+                </p>
 
-            <div class="links py-2 h-full sm:text-xl sm:flex sm:flex-row sm:justify-between"
-                 v-if="data.links && data.links.length">
-                <div class="link py-3" v-for="(link, index) in activeLinks" :key="index">
-                    <router-link class="hover:text-black py-10"
-                                 active-class="active"
-                                 :to="link.href"
-                                 v-text="link.title"
-                                 v-if="!link.external"
-                                 exact/>
-                    <a v-else
-                       :href="nav.link"
-                       target="_blank">{{ nav.text }}</a>
+                <div class="links py-2 h-full sm:text-xl sm:flex sm:flex-row sm:justify-between"
+                     v-if="data.links && data.links.length">
+                    <div class="link py-3" v-for="(link, index) in activeLinks" :key="index">
+                        <router-link class="hover:text-black py-10"
+                                     active-class="active"
+                                     :to="link.href"
+                                     v-text="link.title"
+                                     v-if="!link.external"
+                                     exact/>
+                        <a v-else
+                           :href="nav.link"
+                           target="_blank">{{ nav.text }}</a>
+                    </div>
                 </div>
-            </div>
-        </header>
+            </header>
+        </div>
     </main>
 </template>
 
