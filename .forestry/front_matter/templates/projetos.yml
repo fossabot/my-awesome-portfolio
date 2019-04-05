@@ -21,7 +21,7 @@ fields:
   - name: href
     type: text
     label: Project website
-    default: '#'
+    default: "#"
   - name: external
     type: boolean
     label: External
