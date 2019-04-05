@@ -54,9 +54,13 @@ module.exports = {
 		disqusApiKey: info.disqusApiKey
 	},
 	plugins: [
-		'@vuepress/google-analytics', {ga: info.googleAnalytics},
+		['@vuepress/google-analytics', {ga: info.googleAnalytics}],
 		'disqus',
 		'vuepress-plugin-reading-time',
-		'@vuepress/back-to-top'
+		'@vuepress/back-to-top',
+		['vuepress-plugin-feed', {
+			canonical_base: info.siteCanonicalBase+'blog/',
+			posts_directories: ['portfolio/blog/']
+		}]
 	]
 }

@@ -7,6 +7,12 @@ fields:
   label: Site Name
   config:
     required: true
+- name: siteCanonicalBase
+  type: text
+  label: Site Canonical Base URL
+  description: "i.e. https://example.com/"
+  config:
+    required: true
 - name: siteDescription
   type: text
   label: Site Description

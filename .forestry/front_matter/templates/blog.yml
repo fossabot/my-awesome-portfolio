@@ -25,5 +25,5 @@ fields:
 - name: view
   type: text
   label: Internal page type
-  default: posts
+  default: post
   hidden: true

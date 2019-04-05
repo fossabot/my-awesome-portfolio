@@ -1,5 +1,5 @@
 ---
-view: posts
+type: post
 title: testando
 date: 2019-03-13 03:00:00 +0000
 tags:

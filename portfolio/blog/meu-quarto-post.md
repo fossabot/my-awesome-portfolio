@@ -1,5 +1,5 @@
 ---
-view: posts
+type: post
 title: Meu quarto post
 date: 2018-04-12 08:32:30
 tags: []

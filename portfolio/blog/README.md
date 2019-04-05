@@ -1,6 +1,6 @@
 ---
 title: Todos posts
-view: posts 
+type: post 
 sidebar: true
 ---
 # Blog page title
