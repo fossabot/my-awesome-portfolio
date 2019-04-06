@@ -54,6 +54,7 @@
 	import {resolvePage, normalize, outboundRE, endingSlashRE} from '@parent-theme/util'
 
 	export default {
+		name: 'Page',
 		props: ['sidebarItems'],
 
 		beforeMount(){

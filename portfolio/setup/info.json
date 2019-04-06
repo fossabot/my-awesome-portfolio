@@ -26,7 +26,12 @@
     },
     {
       "text": "contato",
-      "link": "/contato.html"
+      "items": [
+        {"text": "NPM", "link": "https://www.npmjs.com/~thomas.groch"},
+        {"text": "Twitter", "link": "https://twitter.com/thgroch"},
+        {"text": "Github","link": "https://github.com/thomasgroch"}
+      ],
+      "draft": false
     }
   ]
 }

@@ -3,7 +3,7 @@ const head = require('./head')
 const {generateBlogSideBar} = require('./util')
 const resolve = pathName => path.join(__dirname, pathName)
 const info = require('../setup/info.json')
-const connect = require('../setup/connect.json')
+const Dotenv = require('dotenv-webpack')
 
 module.exports = {
 	base: '/',
@@ -19,6 +19,9 @@ module.exports = {
 	},
 	configureWebpack() {
 		return {
+			plugins: [
+				new Dotenv()
+			],
 			resolve: {
 				alias: {
 					'@public': resolve('./portfolio/.vuepress/public')
@@ -29,6 +32,7 @@ module.exports = {
 	head,
 	themeConfig: {
 		logo: info.logo,
+		author: 'Thomas Groch',
 		activeHeaderLinks: false, // Default: true
 		lastUpdated: false,
 		// lastUpdated: {
@@ -37,6 +41,7 @@ module.exports = {
 		// },
 		nav: [
 			...info.menu.filter(link => !link.draft)
+			// TODO: Add categories list section
 		],
 		sidebar: [
 			...generateBlogSideBar('/blog')
