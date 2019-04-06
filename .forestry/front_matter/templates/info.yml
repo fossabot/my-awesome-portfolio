@@ -10,7 +10,7 @@ fields:
 - name: siteCanonicalBase
   type: text
   label: Site Canonical Base URL
-  description: "i.e. https://example.com/"
+  description: i.e. https://example.com/
   config:
     required: true
 - name: siteDescription
