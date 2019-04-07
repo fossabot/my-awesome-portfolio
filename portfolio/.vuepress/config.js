@@ -63,8 +63,12 @@ module.exports = {
 		'disqus',
 		'vuepress-plugin-reading-time',
 		'@vuepress/back-to-top',
+		['demo-code', {
+			showText: 'abrir código',
+			hideText: 'fechar'
+		}],
 		['vuepress-plugin-feed', {
-			canonical_base: info.siteCanonicalBase+'blog/',
+			canonical_base: info.siteCanonicalBase + 'blog/',
 			posts_directories: ['portfolio/blog/']
 		}]
 	]

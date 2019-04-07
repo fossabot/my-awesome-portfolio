@@ -179,6 +179,20 @@ This is the value of `$site.themeConfig`:
 }
 ```
 
+# Demo-code Vuepress plugin
+
+::: demo
+<div @click="onClick">Click me!</div>
+
+<script>
+export default {
+    methods: {
+        onClick: () => { window.alert('It works!') },
+    },
+}
+</script>
+:::
+
 ## HTML Element with Tailwindcss
 
 <div class=" container mx-auto py-10">
