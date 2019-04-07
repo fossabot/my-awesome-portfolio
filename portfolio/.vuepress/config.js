@@ -13,7 +13,7 @@ module.exports = {
 	serviceWorker: true,
 	markdown: {
 		config: md => {
-			md.use(require('markdown-it-katex'))
+			// md.use(require('markdown-it-katex'))
 			md.use(require('markdown-it-footnote'))
 		}
 	},
@@ -59,7 +59,7 @@ module.exports = {
 		disqusApiKey: info.disqusApiKey
 	},
 	plugins: [
-		['@vuepress/google-analytics', {ga: info.googleAnalytics}],
+		// ['@vuepress/google-analytics', {ga: info.googleAnalytics}],
 		'disqus',
 		'vuepress-plugin-reading-time',
 		'@vuepress/back-to-top',

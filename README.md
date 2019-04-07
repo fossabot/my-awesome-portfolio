@@ -13,3 +13,7 @@
 Eu reescrevi meu portfólio muitas vezes, e cada vez fui influenciado por alguém novo. Essas pessoas incluem:
 
 - [recoluan](https://github.com/recoluan)
+
+# Conhecimentos
+
+https://github.com/alexfoxy/laxxx

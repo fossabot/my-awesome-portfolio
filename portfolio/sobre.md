@@ -19,3 +19,5 @@ Lorem ipsum dolor sit amet, ad cum verear platonem, at mel solum dolores. Vim me
 
 <Contato/>
 Lorem ipsum dolor sit amet, ad cum verear platonem, at mel solum dolores. Vim meis lorem soluta ea.
+
+[hashbase](dat://thomasgroch.hashbase.io/contato.html)
