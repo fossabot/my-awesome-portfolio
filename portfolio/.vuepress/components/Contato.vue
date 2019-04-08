@@ -179,8 +179,9 @@
 					return
 				}
 				console.log('result: ' + result)
-				this.$refs.form.submit()
+				// this.$refs.form.submit()
 				console.log('Form Submitted!')
+                return true
 			},
 
 			hasFilled(field) {
