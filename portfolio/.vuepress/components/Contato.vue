@@ -3,7 +3,9 @@
         <div class="flex mb-4 flex-wrap justify-center">
 
             <form class="w-full max-w-md font-nunito"
-                  @submit.prevent="validateBeforeSubmit">
+                  @submit.prevent="validateBeforeSubmit"
+                  netlify>
+                <input type="hidden" name="form-name" value="contact" />
                 <div class="flex flex-wrap -mx-3 mb-2">
                     <div class="w-full md:w-full px-3 mb-3 md:mb-0">
 
