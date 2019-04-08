@@ -4,6 +4,7 @@
 
             <form class="w-full max-w-md font-nunito"
                   @submit.prevent="validateBeforeSubmit"
+                  ref="form"
                   netlify>
                 <input type="hidden" name="form-name" value="contact" />
                 <div class="flex flex-wrap -mx-3 mb-2">
@@ -168,11 +169,13 @@
 						throw new Error('Form is not valid')
 					}
 					console.log('result: ' + result)
+
 				} catch (error) {
 					console.log(error)
 					return
 				}
 				console.log('result: ' + result)
+				this.$refs.form.submit()
 				console.log('Form Submitted!')
 			},
 
