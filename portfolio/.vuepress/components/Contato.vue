@@ -5,6 +5,10 @@
             <form class="w-full max-w-md font-nunito"
                   @submit.prevent="validateBeforeSubmit"
                   ref="form"
+                  name="contact"
+                  method="post"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
                   netlify>
                 <input type="hidden" name="form-name" value="contact" />
                 <div class="flex flex-wrap -mx-3 mb-2">
