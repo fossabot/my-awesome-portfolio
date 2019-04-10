@@ -63,7 +63,7 @@ exports.handler = async (event, context) => {
 	}
 
 	try {
-		const result = mailgun.messages().send(playloadMail, function (sendError, responseMail) {
+		const result = await mailgun.messages().send(playloadMail, function (sendError, responseMail) {
 			if (sendError) {
 				console.log(sendError)
 				throw Error(sendError)
