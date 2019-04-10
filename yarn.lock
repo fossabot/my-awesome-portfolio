@@ -5926,6 +5926,11 @@ lz-string@^1.4.4:
   resolved "https://registry.yarnpkg.com/lz-string/-/lz-string-1.4.4.tgz#c0d8eaf36059f705796e1e344811cf4c498d3a26"
   integrity sha1-wNjq82BZ9wV5bh40SBHPTEmNOiY=
 
+mailgun-es6@1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/mailgun-es6/-/mailgun-es6-1.1.4.tgz#5fb82c6d91b5823fcd1c0d699361e4cc7200ce8e"
+  integrity sha1-X7gsbZG1gj/NHA1pk2HkzHIAzo4=
+
 mailgun-js@0.22.0:
   version "0.22.0"
   resolved "https://registry.yarnpkg.com/mailgun-js/-/mailgun-js-0.22.0.tgz#128942b5e47a364a470791608852bf68c96b3a05"
