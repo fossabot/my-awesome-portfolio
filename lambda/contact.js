@@ -1,4 +1,5 @@
 import {parse} from 'querystring'
+
 const Mailgun = require('mailgun-js')
 
 const headers = {
@@ -11,6 +12,7 @@ exports.handler = async (event, context) => {
 	if (event.httpMethod !== 'POST') {
 		return {
 			statusCode: 410,
+			headers,
 			body: JSON.stringify({
 				message: 'Only POST requests allowed.',
 			}),
@@ -62,7 +64,14 @@ exports.handler = async (event, context) => {
 	}
 
 	try {
-		const responseMail = await mailgun.messages().send(playloadMail)
+		mailgun.messages().send(playloadMail, function (sendError, responseMail) {
+			if (sendError) {
+				console.log(sendError)
+				throw Error(sendError)
+				return
+			}
+			console.log(responseMail)
+		})
 	} catch (error) {
 		return {
 			statusCode: 500,
@@ -84,7 +93,7 @@ exports.handler = async (event, context) => {
 			body: JSON.stringify({})
 		}
 	}
-console.log(process.env)
+
 	// return data to AJAX request
 	return {
 		statusCode: 200,
