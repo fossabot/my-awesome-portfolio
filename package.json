@@ -49,7 +49,8 @@
     "vue-textarea-autosize": "1.0.4",
     "vuepress": "next",
     "vuepress-plugin-disqus": "0.1.1",
-    "vuepress-plugin-reading-time": "0.1.1"
+    "vuepress-plugin-reading-time": "0.1.1",
+    "dotenv-webpack": "1.7.0"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
@@ -62,7 +63,6 @@
     "humans-generator": "2.1.1",
     "vuepress-plugin-demo-code": "0.3.5",
     "vuepress-plugin-feed": "0.1.5",
-    "dotenv": "7.0.0",
-    "dotenv-webpack": "1.7.0"
+    "dotenv": "7.0.0"
   }
 }
