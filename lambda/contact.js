@@ -47,32 +47,36 @@ exports.handler = async (event, context) => {
 	}
 
 	// code
-	const {MAILGUN_API_KEY: apiKey, MAILGUN_DOMAIN: domain, MAILGUN_TEST_MODE: testMode} = process.env
+	const {MAILGUN_API_KEY: apiKey, MAILGUN_DOMAIN: domain} = process.env
 
 	const mailgun = Mailgun({
 		apiKey,
 		domain,
-		testMode,
 		retry: 3
 	})
 
 	const playloadMail = {
-		from: 'Thomas Groch <comercial@thomasgroch.com>',
+		from: 'Thomas Groch <thomas.groch@gmail.com>',
 		to: payload.email,
 		subject: 'Obrigado pelo seu interesse ' + payload.nome + '.',
 		text: 'Retorno para você o mais cedo possível!'
 	}
 
 	try {
-		mailgun.messages().send(playloadMail, function (sendError, responseMail) {
+		const result = mailgun.messages().send(playloadMail, function (sendError, responseMail) {
 			if (sendError) {
 				console.log(sendError)
 				throw Error(sendError)
 				return
 			}
+			console.log('[responseMail]')
 			console.log(responseMail)
 		})
+		console.log('[result]')
+		console.log(result)
 	} catch (error) {
+		console.log('[error]')
+		console.log(error)
 		return {
 			statusCode: 500,
 			headers,
