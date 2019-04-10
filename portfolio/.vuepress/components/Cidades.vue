@@ -1,10 +1,10 @@
 <template>
     <div>
         <!--<input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-grey"-->
-               <!--id="grid-cidade" type="text">-->
+        <!--id="grid-cidade" type="text">-->
         <select class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-grey"
                 v-model="cidade"
-                id="grid-cidade">
+                :id="id">
             <option v-for="cidade in cidadesList" :value="cidade">{{cidade}}</option>
         </select>
         <div class="pointer-events-none absolute pin-y pin-r flex items-center px-2 text-grey-darker">
@@ -20,6 +20,10 @@
 	export default {
 		name: 'Cidades',
 		props: {
+			id: {
+				type: String,
+				required: false
+			},
 			estado: {
 				type: String,
 				required: true

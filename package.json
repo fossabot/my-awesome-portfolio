@@ -1,7 +1,7 @@
 {
   "name": "my-awesome-portfolio",
   "version": "1.0.4",
-  "description": "desenvolvedor autodidata, full-stack, e adepto de convenção sobre configuração.",
+  "description": "my awesome portfolio frontend.",
   "keywords": [
     "blog",
     "developer",
@@ -18,13 +18,17 @@
   "license": "MIT",
   "author": "Thomas Letsch Groch <thomas.groch@gmail.com>",
   "scripts": {
-    "build": "vuepress build portfolio --dest dist",
+    "start": "run-s start:**",
+    "start:front": "vuepress dev portfolio --host 0.0.0.0 --port 8080",
+    "start:back": "netlify-lambda serve portfolio/lambda --timeout 10  -c webpack.server.js",
+    "build": "run-p build:**",
+    "build:front": "vuepress build portfolio --dest dist",
+    "build:back": "netlify-lambda build portfolio/lambda --timeout 10",
+    "dev": "yarn start:front",
     "debug": "npx nodejs-dashboard -- yarn dev",
-    "dev": "vuepress dev portfolio --host 0.0.0.0 --port 8080",
     "lint": "eslint portfolio/**/ --ext .js,.vue --ignore-path .gitignore portfolio",
     "precommit": "yarn lint",
-    "serve": "yarn build && npx http-server dist/ -c-1 -o -a 0.0.0.0",
-    "start": "yarn serve"
+    "serve": "yarn build:front && npx http-server dist/ -c-1 -o -a 0.0.0.0"
   },
   "dependencies": {
     "@silvanite/vuepress-plugin-markdown-classes": "1.0.1",
@@ -36,7 +40,10 @@
     "dotenv-webpack": "1.7.0",
     "markdown-it-footnote": "3.0.1",
     "moment": "2.24.0",
+    "netlify-lambda": "1.4.3",
+    "postmark": "2.2.4",
     "tailwindcss": "0.7.4",
+    "tippy.js": "4.2.1",
     "vee-validate": "2.2.0",
     "vue-textarea-autosize": "1.0.4",
     "vuepress": "next",
@@ -52,6 +59,7 @@
     "eslint-plugin-vue": "^4.7.0",
     "gitmoji-cli": "^1.9.2",
     "humans-generator": "2.1.1",
+    "npm-run-all": "4.1.5",
     "vuepress-plugin-demo-code": "0.3.5",
     "vuepress-plugin-feed": "0.1.5"
   }

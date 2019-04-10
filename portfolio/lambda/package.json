@@ -1,0 +1,17 @@
+{
+  "name": "my-awesome-portfolio-lambda",
+  "version": "1.0.0",
+  "description": "my awesome portfolio backend",
+  "main": "contact.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Thomas Groch <thomas.groch@gmail.com> (https://thomasgroch.com/)",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "dotenv": "7.0.0",
+    "mailgun-js": "0.22.0"
+  }
+}

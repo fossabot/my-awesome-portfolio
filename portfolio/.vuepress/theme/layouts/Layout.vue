@@ -34,7 +34,6 @@
 <script>
 	import Vue from 'vue'
 	import nprogress from 'nprogress'
-	import Home from '@theme/components/Home.vue'
 	import Navbar from '@theme/components/Navbar.vue'
 	import Page from '@theme/components/Page.vue'
 	import Sidebar from '@theme/components/Sidebar.vue'
@@ -45,7 +44,7 @@
 	// import Password from '@theme/components/Password/'
 
 	export default {
-		components: {Home, Page, Sidebar, Navbar, SWUpdatePopup},
+		components: { Page, Sidebar, Navbar, SWUpdatePopup},
         name: 'Layout',
 		data() {
 			return {

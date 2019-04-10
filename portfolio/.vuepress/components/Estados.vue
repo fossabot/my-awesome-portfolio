@@ -2,7 +2,7 @@
     <div>
         <select class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-grey"
                 v-model="estado"
-                id="grid-estado">
+                :id="id">
             <option v-for="estado in estadosList" :value="estado.value">{{estado.text}}</option>
         </select>
         <div class="pointer-events-none absolute pin-y pin-r flex items-center px-2 text-grey-darker">
@@ -15,7 +15,12 @@
 <script>
 	export default {
 		name: 'Estados',
-
+		props: {
+			id: {
+				type: String,
+				required: false
+			},
+		},
 		data() {
 			return {
 				estado: null,

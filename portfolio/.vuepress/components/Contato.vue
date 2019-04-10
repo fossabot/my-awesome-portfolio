@@ -3,6 +3,7 @@
         <div class="flex mb-4 flex-wrap justify-center">
 
             <form class="w-full max-w-md font-nunito"
+                  :action="formAction"
                   @submit.prevent="validateBeforeSubmit"
                   ref="form"
                   name="contact"
@@ -10,7 +11,7 @@
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
                   netlify>
-                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="form-name" value="contact"/>
                 <div class="flex flex-wrap -mx-3 mb-2">
                     <div class="w-full md:w-full px-3 mb-3 md:mb-0">
 
@@ -104,7 +105,8 @@
                                      :class="{'input': true, 'border-red': errors.has('estado') }"
                                      name="estado"
                                      v-validate="'required'"
-                                     v-model="estado"/>
+                                     v-model="estado"
+                                     id="grid-estado"/>
                             <p class="text-red text-xs italic"
                                v-if="errors.has('estado')">{{ errors.first('estado') }}</p>
                         </div>
@@ -124,7 +126,8 @@
                                     v-validate="'required'"
                                     v-model="cidade"
                                     :estado="estado"
-                                    @onCidadeSelected="changeCidade"/>
+                                    @onCidadeSelected="changeCidade"
+                                    id="grid-cidade"/>
                             <p class="text-red text-xs italic"
                                v-if="errors.has('cidade')">{{ errors.first('cidade') }}</p>
                         </div>
@@ -163,17 +166,33 @@
 				mensagem: '',
 			}
 		},
-		computed: {},
+		computed: {
+			formAction() {
+				return (process.env.NODE_ENV === 'production') ? '/.netlify/functions/contact' : 'http://localhost:9000/.netlify/functions/contact'
+			}
+		},
 		methods: {
 			async validateBeforeSubmit() {
 				let result = false
 				try {
+					// TODO: Add UX like this
+					//  https://forestry-community.slack.com/join/shared_invite/enQtNDAxMTU5NzcwMzA3LWUyYTk3NDY2ZDNiMjFhNmVlMjExM2FjYzFhNjJhNjU2NTc2ODVjZTdlYjJiODhhZDgwYTVhYjY0ZGU3ZWFmYzM
 					result = await this.$validator.validateAll()
 					if (!result) {
 						throw new Error('Form is not valid')
+						return
 					}
-					console.log('result: ' + result)
+					console.log(this.$data)
 
+					const response = await fetch(this.formAction, {
+						method: 'POST',
+						body: JSON.stringify(this.$data)
+					})
+					const body = response.json()
+					if (Number(response.status) !== 200) {
+						throw new Error('Status ${response.status}. Error submitting the form.')
+						return
+					}
 				} catch (error) {
 					console.log(error)
 					return
@@ -181,7 +200,7 @@
 				console.log('result: ' + result)
 				// this.$refs.form.submit()
 				console.log('Form Submitted!')
-                return true
+				return true
 			},
 
 			hasFilled(field) {
@@ -196,7 +215,8 @@
 			changeCidade(cidade) {
 				this.cidade = cidade
 			}
-		},
+		}
+		,
 		mounted() {
 			this.$refs.textarea.style.minHeight = this.$refs.textarea.scrollHeight + 'px'
 		}
