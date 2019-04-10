@@ -20,11 +20,11 @@
   "scripts": {
     "start": "run-s start:**",
     "start:front": "vuepress dev portfolio --host 0.0.0.0 --port 8080",
-    "start:back": "netlify-lambda serve portfolio/lambda --timeout 10  -c webpack.server.js",
+    "start:back": "netlify-lambda serve portfolio/lambda --timeout 10",
     "build": "run-p build:**",
     "build:front": "vuepress build portfolio --dest dist",
     "build:back": "netlify-lambda build portfolio/lambda --timeout 10",
-    "dev": "yarn start:front",
+    "dev": "yarn start:front -- -c webpack.server.js",
     "debug": "npx nodejs-dashboard -- yarn dev",
     "lint": "eslint portfolio/**/ --ext .js,.vue --ignore-path .gitignore portfolio",
     "precommit": "yarn lint",
