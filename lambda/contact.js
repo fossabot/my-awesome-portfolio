@@ -71,7 +71,7 @@ exports.handler = async (event, context) => {
 		}
 		const result = await sendEmail(playloadMail)
 		if (!result || !result.message) {
-			throw Error(result)
+			throw new Error(result)
 		}
 	} catch (error) {
 		console.log('[error]')
