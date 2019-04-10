@@ -1,6 +1,7 @@
 import {parse} from 'querystring'
 
-const Mailgun = require('mailgun-js')
+// const Mailgun = require('mailgun-js')
+const MailGun = require('mailgun-es6')
 
 const headers = {
 	'Access-Control-Allow-Origin': '*', // better change this for production
@@ -47,31 +48,47 @@ exports.handler = async (event, context) => {
 	}
 
 	// code
-	const {MAILGUN_API_KEY: apiKey, MAILGUN_DOMAIN: domain} = process.env
+	const {MAILGUN_PRIVATE_API_KEY: privateApi, MAILGUN_PUBLIC_API_KEY: publicApi, MAILGUN_DOMAIN: domainName} = process.env
+	// const {MAILGUN_API_KEY: apiKey, MAILGUN_DOMAIN: domain} = process.env
 
-	const mailgun = Mailgun({
-		apiKey,
-		domain,
-		retry: 3
+	const mailGun = new MailGun({
+		privateApi,
+		publicApi,
+		domainName
 	})
 
+	// const mailgun = Mailgun({
+	// 	apiKey,
+	// 	domain,
+	// 	retry: 3
+	// })
+
 	const playloadMail = {
-		from: 'Thomas Groch <thomas.groch@gmail.com>',
-		to: payload.email,
+		from: 'comercial@thomasgroch.com',
+		to: ['thomas.groch@gmail.com'],
 		subject: 'Obrigado pelo seu interesse ' + payload.nome + '.',
 		text: 'Retorno para você o mais cedo possível!'
 	}
+	// const playloadMail = {
+	// 	from: 'Thomas Groch <thomas.groch@gmail.com>',
+	// 	to: payload.email,
+	// 	subject: 'Obrigado pelo seu interesse ' + payload.nome + '.',
+	// 	text: 'Retorno para você o mais cedo possível!'
+	// }
+
 
 	try {
-		const result = await mailgun.messages().send(playloadMail, function (sendError, responseMail) {
-			if (sendError) {
-				console.log(sendError)
-				throw Error(sendError)
-				return
-			}
-			console.log('[responseMail]')
-			console.log(responseMail)
-		})
+		const result = await mailGun.sendEmail(playloadMail)
+
+		// const result = await mailgun.messages().send(playloadMail, function (sendError, responseMail) {
+		// 	if (sendError) {
+		// 		console.log(sendError)
+		// 		throw Error(sendError)
+		// 		return
+		// 	}
+		// 	console.log('[responseMail]')
+		// 	console.log(responseMail)
+		// })
 		console.log('[result]')
 		console.log(result)
 	} catch (error) {

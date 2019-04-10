@@ -64,5 +64,13 @@
     "gitmoji-cli": "^1.9.2",
     "humans-generator": "2.1.1",
     "dotenv": "7.0.0"
+  },
+  "proxy": {
+    "/.netlify/functions": {
+      "target": "http://localhost:9000",
+      "pathRewrite": {
+        "^/\\.netlify/functions": ""
+      }
+    }
   }
 }
