@@ -4,7 +4,7 @@
 firebase.json
 dist
 package-lock.json
-.netlify/functions/
+dist_lambda/
 .vuepress/dist/
 
 # Created by https://www.gitignore.io/api/node,macos,linux,windows,sublimetext,webstorm+all,visualstudiocode
