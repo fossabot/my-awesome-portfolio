@@ -2,11 +2,26 @@ import {parse} from 'querystring'
 
 const Mailgun = require('mailgun-js')
 
+const {MAILGUN_API_KEY: apiKey, MAILGUN_DOMAIN: domain} = process.env
+const mailgun = Mailgun({
+	apiKey,
+	domain,
+	retry: 3
+})
+
 const headers = {
 	'Access-Control-Allow-Origin': '*', // better change this for production
 	'Access-Control-Allow-Methods': 'POST',
 	'Access-Control-Allow-Headers': 'Content-Type'
 }
+
+const sendEmail = data => {
+	const {from, to, subject, text} = data
+	const email = {from, to, subject, text}
+
+	return mg.messages().send(email)
+}
+
 exports.handler = async (event, context) => {
 	// only allow POST requests
 	if (event.httpMethod !== 'POST') {
@@ -47,31 +62,14 @@ exports.handler = async (event, context) => {
 	}
 
 	// code
-	const {MAILGUN_API_KEY: apiKey, MAILGUN_DOMAIN: domain} = process.env
-
-	const mailgun = Mailgun({
-		apiKey,
-		domain,
-		retry: 3
-	})
-
-	const playloadMail = {
-		from: 'Thomas Groch <thomas.groch@gmail.com>',
-		to: payload.email,
-		subject: 'Obrigado pelo seu interesse ' + payload.nome + '.',
-		text: 'Retorno para você o mais cedo possível!'
-	}
-
 	try {
-		const result = mailgun.messages().send(playloadMail, function (sendError, responseMail) {
-			if (sendError) {
-				console.log(sendError)
-				throw Error(sendError)
-				return
-			}
-			console.log('[responseMail]')
-			console.log(responseMail)
-		})
+		const playloadMail = {
+			from: 'Thomas Groch <thomas.groch@gmail.com>',
+			to: payload.email,
+			subject: 'Obrigado pelo seu interesse ' + payload.nome + '.',
+			text: 'Retorno para você o mais cedo possível!'
+		}
+		const result = await sendEmail(playloadMail)
 		console.log('[result]')
 		console.log(result)
 	} catch (error) {
