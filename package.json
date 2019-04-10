@@ -23,7 +23,7 @@
     "start:back": "netlify-lambda serve portfolio/lambda --timeout 10",
     "build": "run-p build:**",
     "build:front": "vuepress build portfolio --dest dist",
-    "build:back": "netlify-lambda build portfolio/lambda --timeout 10",
+    "build:back": "netlify-lambda build lambda/ --timeout 10",
     "dev": "yarn start:front -- -c webpack.server.js",
     "debug": "npx nodejs-dashboard -- yarn dev",
     "lint": "eslint portfolio/**/ --ext .js,.vue --ignore-path .gitignore portfolio",
