@@ -64,7 +64,7 @@ exports.handler = async (event, context) => {
 	// code
 	try {
 		const playloadMail = {
-			from: 'Thomas Groch <thomas.groch@gmail.com>',
+			from: process.env.MAILGUN_FROM || 'Support <support@thomasgroch.com>',
 			to: payload.email,
 			subject: 'Obrigado pelo seu interesse ' + payload.nome + '.',
 			text: 'Retorno para você o mais cedo possível!'
