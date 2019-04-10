@@ -84,7 +84,7 @@ exports.handler = async (event, context) => {
 			body: JSON.stringify({})
 		}
 	}
-
+console.log(process.env)
 	// return data to AJAX request
 	return {
 		statusCode: 200,
