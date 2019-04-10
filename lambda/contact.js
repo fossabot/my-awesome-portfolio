@@ -19,7 +19,7 @@ const sendEmail = data => {
 	const {from, to, subject, text} = data
 	const email = {from, to, subject, text}
 
-	return mg.messages().send(email)
+	return mailgun.messages().send(email)
 }
 
 exports.handler = async (event, context) => {
@@ -70,8 +70,9 @@ exports.handler = async (event, context) => {
 			text: 'Retorno para você o mais cedo possível!'
 		}
 		const result = await sendEmail(playloadMail)
-		console.log('[result]')
-		console.log(result)
+		if (!result || !result.message) {
+			throw Error(result)
+		}
 	} catch (error) {
 		console.log('[error]')
 		console.log(error)
