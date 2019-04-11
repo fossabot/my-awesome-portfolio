@@ -20,4 +20,5 @@ export default {
 }
 </script>
 
+# Tags
 <Tags/>

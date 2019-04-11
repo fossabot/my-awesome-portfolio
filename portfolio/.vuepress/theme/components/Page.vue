@@ -33,19 +33,23 @@
                 </span>
             </p>
         </div>
-        <p>asdasd</p>
-        <p :v-text="showComments"></p>
+
         <div class="text-center"
              v-if="showComments">
+
             <ClientOnly>
-                <Disqus
-                        :shortname="$site.themeConfig.disqus"
-                        :title="$page.title"
-                        :identifier="disqusIdentifier"
-                        :url="disqusUrl"
-                        :api_key="$site.themeConfig.disqusApiKey"
-                />
+                <Vssue title="Vssue Demo" />
             </ClientOnly>
+
+            <!--<ClientOnly>-->
+                <!--<Disqus-->
+                        <!--:shortname="$site.themeConfig.disqus"-->
+                        <!--:title="$page.title"-->
+                        <!--:identifier="disqusIdentifier"-->
+                        <!--:url="disqusUrl"-->
+                        <!--:api_key="$site.themeConfig.disqusApiKey"-->
+                <!--/>-->
+            <!--</ClientOnly>-->
         </div>
 
         <slot name="bottom"/>

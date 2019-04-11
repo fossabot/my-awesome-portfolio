@@ -60,7 +60,6 @@ module.exports = {
 	},
 	plugins: [
 		// ['@vuepress/google-analytics', {ga: info.googleAnalytics}],
-		'disqus',
 		'vuepress-plugin-reading-time',
 		'@vuepress/back-to-top',
 		['demo-code', {
