@@ -197,10 +197,16 @@
 					console.log(error)
 					return
 				}
-				console.log('result: ' + result)
-				// this.$refs.form.submit()
-				console.log('Form Submitted!')
+
+				// Show success
+				this.showSuccess(this.$data)
+
 				return true
+			},
+
+			showSuccess(data) {
+				alert('It works!')
+				alert(data)
 			},
 
 			hasFilled(field) {
