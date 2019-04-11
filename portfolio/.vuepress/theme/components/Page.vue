@@ -33,8 +33,10 @@
                 </span>
             </p>
         </div>
+        <p>asdasd</p>
+        <p :v-text="showComments"></p>
         <div class="text-center"
-             v-if="$page.frontmatter.view && $page.frontmatter.view === 'posts' && $page.path !== '/blog/'">
+             v-if="showComments">
             <ClientOnly>
                 <Disqus
                         :shortname="$site.themeConfig.disqus"
@@ -51,19 +53,26 @@
 </template>
 
 <script>
-	import {resolvePage, normalize, outboundRE, endingSlashRE} from '@parent-theme/util'
+	import {endingSlashRE, normalize, outboundRE, resolvePage} from '@parent-theme/util'
 
 	export default {
 		name: 'Page',
 		props: ['sidebarItems'],
 
-		beforeMount(){
+		beforeMount() {
 			const protocol = location.protocol
 			const slashes = protocol.concat('//')
 			this.host = slashes.concat(window.location.hostname)
 		},
 
 		computed: {
+			showComments() {
+				return process.env.NODE_ENV !== 'development' &&
+                    this.$page.frontmatter.type &&
+					this.$page.frontmatter.type === 'post' &&
+					this.$page.path !== '/blog/'
+			},
+
 			lastUpdated() {
 				return this.$page.lastUpdated
 			},
@@ -132,11 +141,11 @@
 				)
 			},
 
-			disqusIdentifier () {
+			disqusIdentifier() {
 				return this.$page.frontmatter.disqus || this.$page.path
 			},
 
-			disqusUrl () {
+			disqusUrl() {
 				return this.host + this.$page.path
 			}
 		},

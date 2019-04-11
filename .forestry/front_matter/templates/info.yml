@@ -35,7 +35,7 @@ fields:
 - name: disqusApiKey
   type: text
   label: Disqus Api Key
-  description: Optional Disqus Api Key
+  description: Disqus Api Key
   default: ''
 - name: menu
   type: field_group_list
