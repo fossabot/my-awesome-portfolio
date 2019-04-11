@@ -1,11 +1,11 @@
 [build]
-  command = "yarn build"
-  publish = "dist/"
-  functions = "dist_lambda/"
+  command = 'yarn build'
+  publish = 'dist/'
+  functions = 'dist_lambda/'
 
 [template.environment]
-    NODE_ENV=development
-    MAILGUN_API_KEY="Your MailGun API Key"
+    NODE_ENV='production'
+    MAILGUN_API_KEY='Your MailGun API Key'
     MAILGUN_DOMAIN='example.com'
     MAILGUN_FROM='Full Name <fullname@example.com>'
-    FAUNADB_SERVER_SECRET="Your FaunaDB Server Secret"
+    FAUNADB_SERVER_SECRET='Your FaunaDB Server Secret'
