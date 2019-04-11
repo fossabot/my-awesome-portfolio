@@ -15,10 +15,10 @@
                     {{ data.tagline || $description || 'Welcome to your VuePress site' }}
                 </p>
 
-                <div class="links py-2 h-full sm:text-xl sm:flex sm:flex-row sm:justify-between"
+                <div class="links py-2 sm:text-xl sm:flex sm:flex-row sm:justify-between"
                      v-if="data.links && data.links.length">
-                    <div class="link py-3" v-for="(link, index) in activeLinks" :key="index">
-                        <router-link class="hover:text-black py-10"
+                    <div class="link py-6" v-for="(link, index) in activeLinks" :key="index">
+                        <router-link class="hover:text-black"
                                      active-class="active"
                                      :to="link.href"
                                      v-text="link.title"

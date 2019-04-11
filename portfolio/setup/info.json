@@ -27,6 +27,7 @@
     {
       "text": "contato",
       "items": [
+        {"text": "Site", "link": "/contato.html"},
         {"text": "NPM", "link": "https://www.npmjs.com/~thomas.groch"},
         {"text": "Twitter", "link": "https://twitter.com/thgroch"},
         {"text": "Github","link": "https://github.com/thomasgroch"}

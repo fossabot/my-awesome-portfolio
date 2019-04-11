@@ -16,9 +16,6 @@ heroImage: ''
 ---
 ::: slot header
 <Home/>
-:::
-
-::: slot footer
 <BaseRepository/>
 :::
 
