@@ -34,7 +34,7 @@ exports.handler = async (event, context) => {
 			statusCode: 410,
 			headers,
 			body: JSON.stringify({
-				message: 'Only POST requests allowed.',
+				error: 'Only POST requests allowed.',
 			}),
 		}
 	}
@@ -61,7 +61,7 @@ exports.handler = async (event, context) => {
 			statusCode: 422,
 			headers,
 			body: JSON.stringify({
-				message: 'Required information is missing.',
+				error: 'Required information is missing.',
 			}),
 		}
 	}
@@ -82,13 +82,11 @@ exports.handler = async (event, context) => {
 		const dbResponse = await client.query(q.Create(q.Ref('classes/contacts'), {data: payload}))
 
 	} catch (error) {
-		console.log('[error]')
-		console.log(error)
 		return {
 			statusCode: 500,
 			headers,
 			body: JSON.stringify({
-				message: 'Erro ao enviar o email.',
+				error,
 			}),
 		}
 	}

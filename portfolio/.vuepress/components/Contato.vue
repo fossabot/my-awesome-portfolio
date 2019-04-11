@@ -190,7 +190,10 @@
 					})
 					const body = response.json()
 					if (Number(response.status) !== 200) {
-						throw new Error('Status ${response.status}. Error submitting the form.')
+						if(response.body.error){
+							alert(response.body.error)
+                        }
+						throw new Error('Status ${response.status}. Error submitting the form. ')
 						return
 					}
 				} catch (error) {
