@@ -24,6 +24,7 @@
     "build": "run-p build:**",
     "build:front": "vuepress build portfolio --dest dist",
     "build:back": "netlify-lambda build lambda/ --timeout 5 -c webpack.server.js",
+    "prebuild": "echo 'setup faunaDB'; yarn bootstrap",
     "dev": "yarn start:front",
     "debug": "npx nodejs-dashboard -- yarn dev",
     "lint": "eslint portfolio/**/ --ext .js,.vue --ignore-path .gitignore portfolio",
