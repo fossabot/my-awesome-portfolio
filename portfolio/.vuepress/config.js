@@ -60,6 +60,13 @@ module.exports = {
 	},
 	plugins: [
 		// ['@vuepress/google-analytics', {ga: info.googleAnalytics}],
+		// 'pt-BR'
+		['@vssue/vuepress-plugin-vssue', {
+			platform: process.env.VSSUE_PLATFORM,
+			owner: process.env.VSSUE_OWNER,
+			repo: process.env.VSSUE_REPO,
+			clientId: process.env.VSSUE_CLIENT_ID
+		}],
 		'vuepress-plugin-reading-time',
 		'@vuepress/back-to-top',
 		['demo-code', {
