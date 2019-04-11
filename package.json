@@ -20,15 +20,16 @@
   "scripts": {
     "start": "run-s start:**",
     "start:front": "vuepress dev portfolio --host 0.0.0.0 --port 8080",
-    "start:back": "netlify-lambda serve lambda/ --timeout 10 -c webpack.server.js",
+    "start:back": "netlify-lambda serve lambda/ --timeout 3 -c webpack.server.js",
     "build": "run-p build:**",
     "build:front": "vuepress build portfolio --dest dist",
-    "build:back": "netlify-lambda build lambda/ --timeout 10",
+    "build:back": "netlify-lambda build lambda/ --timeout 5",
     "dev": "yarn start:front",
     "debug": "npx nodejs-dashboard -- yarn dev",
     "lint": "eslint portfolio/**/ --ext .js,.vue --ignore-path .gitignore portfolio",
     "precommit": "yarn lint",
-    "serve": "yarn build:front && npx http-server dist/ -c-1 -o -a 0.0.0.0"
+    "serve": "yarn build:front && npx http-server dist/ -c-1 -o -a 0.0.0.0",
+    "bootstrap": "node ./bootstrap-fauna-database.js"
   },
   "dependencies": {
     "@silvanite/vuepress-plugin-markdown-classes": "1.0.1",
@@ -38,6 +39,7 @@
     "@vuepress/plugin-google-analytics": "1.0.0-alpha.44",
     "axios": "0.18.0",
     "dotenv-webpack": "1.7.0",
+    "faunadb": "2.6.1",
     "mailgun-js": "0.22.0",
     "markdown-it-footnote": "3.0.1",
     "moment": "2.24.0",

@@ -1,7 +1,12 @@
 import {parse} from 'querystring'
 
-const Mailgun = require('mailgun-js')
+const faunadb = require('faunadb')
 
+const Mailgun = require('mailgun-js')
+const q = faunadb.query
+const client = new faunadb.Client({
+	secret: process.env.FAUNADB_SERVER_SECRET
+})
 const {MAILGUN_API_KEY: apiKey, MAILGUN_DOMAIN: domain} = process.env
 const mailgun = Mailgun({
 	apiKey,
@@ -73,6 +78,9 @@ exports.handler = async (event, context) => {
 		if (!result || !result.message) {
 			throw new Error(result)
 		}
+
+		const dbResponse = await client.query(q.Create(q.Ref('classes/contacts'), {data: payload}))
+
 	} catch (error) {
 		console.log('[error]')
 		console.log(error)
