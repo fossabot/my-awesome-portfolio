@@ -5,12 +5,17 @@ const resolve = pathName => path.join(__dirname, pathName)
 const info = require('../setup/info.json')
 const Dotenv = require('dotenv-webpack')
 
+// http://localhost:9000
+// TODO: Extract Url from vuepress
+const siteCanonicalBase = (process.env.NODE_ENV === 'production') ? info.siteCanonicalBase : 'http://localhost/'
+
 module.exports = {
 	base: '/',
 	title: info.siteName,
 	description: info.siteDescription,
 	evergreen: true, // Faster on modern browsers. (Disable ES5 transpilation and polyfills for IE)
 	serviceWorker: true,
+	siteCanonicalBase,
 	markdown: {
 		config: md => {
 			// md.use(require('markdown-it-katex'))
@@ -62,7 +67,6 @@ module.exports = {
 		// ['@vuepress/google-analytics', {ga: info.googleAnalytics}],
 		// 'pt-BR'
 		['@vssue/vuepress-plugin-vssue', {
-			platform: process.env.VSSUE_PLATFORM,
 			owner: process.env.VSSUE_OWNER,
 			repo: process.env.VSSUE_REPO,
 			clientId: process.env.VSSUE_CLIENT_ID
@@ -74,7 +78,7 @@ module.exports = {
 			hideText: 'fechar'
 		}],
 		['vuepress-plugin-feed', {
-			canonical_base: info.siteCanonicalBase + 'blog/',
+			canonical_base: siteCanonicalBase + 'blog/',
 			posts_directories: ['portfolio/blog/']
 		}]
 	]
