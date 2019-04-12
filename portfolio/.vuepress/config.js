@@ -39,11 +39,11 @@ module.exports = {
 		logo: info.logo,
 		author: 'Thomas Groch',
 		activeHeaderLinks: false, // Default: true
-		lastUpdated: false,
-		// lastUpdated: {
-		//   label: 'Última atualização',
-		//   format: 'YYYY年MM月DD日'
-		// },
+		repo: 'thomasgroch/my-awesome-portfolio',
+		editLinks: true,
+		docsDir: 'portfolio',
+		lastUpdated: 'Última atualização',
+		editLinkText: 'Edite essa página',
 		nav: [
 			...info.menu.filter(link => !link.draft)
 			// TODO: Add categories list section
@@ -73,7 +73,7 @@ module.exports = {
 			locale: 'pt-BR',
 			prefix: '[site] ',
 			labels: ['site'],
-			issueContent: ({ url }) => `Esta issue é criada automaticamente, para armazenar comentários desta página: ${url}`
+			issueContent: ({url}) => `Esta issue é criada automaticamente, para armazenar comentários desta página: ${url}`
 		}],
 		'vuepress-plugin-reading-time',
 		'@vuepress/back-to-top',

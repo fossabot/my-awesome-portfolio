@@ -7,12 +7,12 @@
         <Content slot-key="footer" class="custom"/>
 
         <footer class="page-edit">
-            <div class="edit-link" v-if="editLink">
+            <div class="edit-link" v-if="editLink && showComments">
                 <a :href="editLink" target="_blank" rel="noopener noreferrer">{{ editLinkText }}</a>
                 <OutboundLink/>
             </div>
 
-            <div class="last-updated" v-if="lastUpdated">
+            <div class="last-updated" v-if="lastUpdated && showComments">
                 <span class="prefix">{{ lastUpdatedText }}: </span>
                 <span class="time">{{ lastUpdated }}</span>
             </div>
@@ -38,7 +38,7 @@
              v-if="showComments">
 
             <ClientOnly>
-                <Vssue title="Vssue Demo" />
+                <Vssue title="Vssue Demo"/>
             </ClientOnly>
         </div>
 
@@ -62,13 +62,16 @@
 		computed: {
 			showComments() {
 				return process.env.NODE_ENV !== 'development' &&
-                    this.$page.frontmatter.type &&
+					this.$page.frontmatter.type &&
 					this.$page.frontmatter.type === 'post' &&
 					this.$page.path !== '/blog/'
 			},
 
 			lastUpdated() {
-				return this.$page.lastUpdated
+				const d = new Date(this.$page.lastUpdated)
+				return d.getDate() + '/' +
+					(d.getUTCMonth() + 1) + '/' +
+					(d.getUTCFullYear() + 1)
 			},
 
 			lastUpdatedText() {
