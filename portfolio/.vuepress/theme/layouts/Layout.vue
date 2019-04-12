@@ -25,8 +25,6 @@
             <slot name="page-bottom" slot="bottom"/>
         </Page>
 
-        <!--<Valine :valineRefresh="valineRefresh"></Valine>-->
-
         <router-view></router-view>
         <SWUpdatePopup :updateEvent="swUpdateEvent"/>
     </div>

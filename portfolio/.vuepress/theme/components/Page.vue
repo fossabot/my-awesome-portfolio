@@ -34,22 +34,12 @@
             </p>
         </div>
 
-        <div class="text-center"
+        <div class="content text-center"
              v-if="showComments">
 
             <ClientOnly>
                 <Vssue title="Vssue Demo" />
             </ClientOnly>
-
-            <!--<ClientOnly>-->
-                <!--<Disqus-->
-                        <!--:shortname="$site.themeConfig.disqus"-->
-                        <!--:title="$page.title"-->
-                        <!--:identifier="disqusIdentifier"-->
-                        <!--:url="disqusUrl"-->
-                        <!--:api_key="$site.themeConfig.disqusApiKey"-->
-                <!--/>-->
-            <!--</ClientOnly>-->
         </div>
 
         <slot name="bottom"/>
