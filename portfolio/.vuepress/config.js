@@ -70,7 +70,10 @@ module.exports = {
 			repo: process.env.VSSUE_REPO,
 			clientId: process.env.VSSUE_CLIENT_ID,
 			clientSecret: process.env.VSSUE_CLIENT_SECRET,
-			locale: 'pt-BR'
+			locale: 'pt-BR',
+			prefix: '[site] ',
+			labels: ['site'],
+			issueContent: ({ url }) => `Esta issue é criada automaticamente, para armazenar comentários desta página: ${url}`
 		}],
 		'vuepress-plugin-reading-time',
 		'@vuepress/back-to-top',
