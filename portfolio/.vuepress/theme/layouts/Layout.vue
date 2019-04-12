@@ -38,8 +38,6 @@
 
 	import SWUpdatePopup from '@theme/components/SWUpdatePopup/'
 	import { resolveSidebarItems } from '@parent-theme/util/'
-	// import Valine from '@theme/components/Valine/'
-	// import Password from '@theme/components/Password/'
 
 	export default {
 		components: { Page, Sidebar, Navbar, SWUpdatePopup},
