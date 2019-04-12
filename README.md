@@ -4,7 +4,7 @@
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgitlab.com%2Fthomas.groch%2Fmy-awesome-portfolio.svg?type=shield)](https://app.fossa.com/projects/git%2Bgitlab.com%2Fthomas.groch%2Fmy-awesome-portfolio?ref=badge_shield)
 
-# Deploy
+# Botão fork e deploy
 
 <a href="https://app.forestry.io/quick-start?repo=thomas&provider=gitlab&engine=vuepress">
     <img alt="Import this project into Forestry" src="https://assets.forestry.io/import-to-forestryK.svg" />
@@ -18,4 +18,4 @@ Eu reescrevi meu portfólio muitas vezes, e cada vez fui influenciado por algué
 
 # Conhecimentos
 
-https://github.com/alexfoxy/laxxx
+- [laxxx](https://github.com/alexfoxy/laxxx)
