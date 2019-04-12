@@ -69,7 +69,8 @@ module.exports = {
 		['@vssue/vuepress-plugin-vssue', {
 			owner: process.env.VSSUE_OWNER,
 			repo: process.env.VSSUE_REPO,
-			clientId: process.env.VSSUE_CLIENT_ID
+			clientId: process.env.VSSUE_CLIENT_ID,
+			clientSecret: process.env.VSSUE_CLIENT_SECRET
 		}],
 		'vuepress-plugin-reading-time',
 		'@vuepress/back-to-top',
